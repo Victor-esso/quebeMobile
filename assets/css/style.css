@@ -1,0 +1,353 @@
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: Quebe
+	Theme URI: 
+	Description: 
+	Author: Victor Esso-Nmakwe
+	Author URI: 
+	Version: 1.0
+
+-----------------------------------------------------------------------------------*/
+:root {
+    --shadow-color: 0deg 0% 80%;
+    --shadow-elevation-low:
+      0px 0.8px 0.9px hsl(var(--shadow-color) / 0.17),
+      0px 1.2px 1.3px -1.2px hsl(var(--shadow-color) / 0.17),
+      0px 2.5px 2.8px -2.5px hsl(var(--shadow-color) / 0.17);
+    --shadow-elevation-medium:
+      0px 0.8px 0.9px hsl(var(--shadow-color) / 0.18),
+      0px 2.3px 2.6px -0.8px hsl(var(--shadow-color) / 0.18),
+      0px 5.3px 6px -1.7px hsl(var(--shadow-color) / 0.18),
+      0.1px 12.7px 14.3px -2.5px hsl(var(--shadow-color) / 0.18);
+    --shadow-elevation-high:
+      0px 0.8px 0.9px hsl(var(--shadow-color) / 0.17),
+      0px 2.9px 3.3px -0.4px hsl(var(--shadow-color) / 0.17),
+      0px 5px 5.6px -0.7px hsl(var(--shadow-color) / 0.17),
+      0px 8px 9px -1.1px hsl(var(--shadow-color) / 0.17),
+      0.1px 12.5px 14.1px -1.4px hsl(var(--shadow-color) / 0.17),
+      0.1px 19.4px 21.8px -1.8px hsl(var(--shadow-color) / 0.17),
+      0.1px 29.2px 32.9px -2.1px hsl(var(--shadow-color) / 0.17),
+      0.2px 42.9px 48.3px -2.5px hsl(var(--shadow-color) / 0.17);
+  }
+
+/*------------------------------------*\
+		#GLOBAL VARIABLES
+\*------------------------------------*/
+:root{
+    --font1:'gilroy', sans-serif;
+    --font2:'Quicksand', sans-serif;
+    --white : #fff;
+    --grey: #efefef;
+    --black: #272222;
+    --blue1: #1e5d7e;
+    --blue2: #00afef;
+    --green: #73bfb8;
+    --green-light : #E8EEF1;
+    --grey-2: #f0f0f0;
+    --dark-grey: #707070;
+    --orange : #ffa500;
+
+}
+*{
+    box-sizing: border-box;
+    font-family: var(--font2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------------------*\
+		#RESET
+\*------------------------------------*/
+
+
+*,
+:active,
+:focus {
+    outline: none !important;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+textarea {
+    resize: none;
+}
+
+::-moz-selection {
+    text-shadow: none;
+}
+
+::selection {
+    text-shadow: none;
+}
+
+::-moz-selection {
+    text-shadow: none;
+}
+
+::-webkit-selection {
+    text-shadow: none;
+}
+
+.form-control {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+button {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+
+
+/*------------------------------------*\
+		#GLOBAL STYLES
+\*------------------------------------*/
+body,
+html {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body{
+    background-color: var(--white);
+    color: var(--black);
+
+}
+
+
+
+input{
+    border: none;
+}
+
+
+::-moz-selection {
+    background-color: var(--blue1);
+    color: var(--white);
+    text-shadow: none;
+}
+
+::selection {
+    background-color: var(--blue1);
+    color: var(--white);
+    text-shadow: none;
+}
+
+
+.swiper-wrapper{
+    width: max-content;
+}
+
+
+.radius-5{
+    border-radius: 5px;
+}
+.radius-1{
+    border-radius: 1px;
+}
+.radius-2{
+    border-radius: 2px;
+}
+.radius-3{
+    border-radius: 3px;
+}
+.radius-4{
+    border-radius: 4px;
+}
+.radius-5{
+    border-radius: 5px;
+}
+.radius-6{
+    border-radius: 6px;
+}
+.radius-7{
+    border-radius: 7px;
+}
+.radius-8{
+    border-radius: 8px;
+}
+.radius-2{
+    border-radius: 2px;
+}
+.radius-9{
+    border-radius: 9px;
+}
+.radius-10{
+    border-radius: 10px;
+}
+.radius-11{
+    border-radius: 11px;
+}
+.radius-12{
+    border-radius: 12px;
+}
+.radius-13{
+    border-radius: 13px;
+}
+.radius-14{
+    border-radius: 14px;
+}
+.radius-15{
+    border-radius: 15px;
+}
+.radius-16{
+    border-radius: 16px;
+}
+.radius-17{
+    border-radius: 17px;
+}
+.radius-18{
+    border-radius: 18px;
+}
+.radius-19{
+    border-radius: 19px;
+}
+.radius-20{
+    border-radius: 20px;
+}
+.radius-25p{
+    border-radius: 25%;
+}
+.radius-50p{
+    border-radius: 50%;
+}
+.radius-100p{
+    border-radius: 100%;
+}
+
+.font-size-1{
+    font-size: .5rem;
+}
+
+.font-size-2{
+    font-size: .7rem;
+}
+
+.font-size-3{
+    font-size: .9rem;
+}
+
+.font-size-4{
+    font-size: 1rem;
+}
+
+.font-size-5{
+    font-size: 1.2rem;
+}
+
+.width-fit-content{
+    width: fit-content;
+}
+
+.width-max-content{
+    width: max-content;
+}
+
+.width-min-content{
+    width: min-content;
+}
+
+
+
+
+.red{background-color: wheat;}
+.blue{background-color: aqua;}
+.yellow{background-color: coral;}
+
+
+
+.fit-parent,.swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.fit-parent .swiper-slide{
+    width: 100%;
+    position: relative;
+}
+
+.fit-parent .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fit-parent .swiper-slide .content{
+    position: absolute;
+    left: 0;
+    bottom: 8%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.fit-parent .swiper-slide .content>div{
+    width: 95%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px 35px 50px 35px;
+}
+
+.fit-parent .swiper-slide .content p{
+    color: var(--dark-grey);
+    font-size: .8rem;
+}
+.fit-parent .swiper-slide .content h2{
+    font-weight: 700;
+    color: var(--black);
+}
+
+.starterSwiper .swiper-nav{
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+}
+.starterSwiper .swiper-nav>div{
+    width: 96%;
+    padding: 0px 35px;
+}
+.starterSwiper .swiper-nav button{
+    background-color: var(--blue1);
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+.starterSwiper .starterSwiper-pagnation{
+    width: fit-content;
+}
+
+.starterSwiper .starterSwiper-pagnation .swiper-pagination-bullet{
+    background-color: #e6e6e6;
+    opacity: 1;
+    width: 15px;
+    border-radius: 5px;
+    height: 6px;
+    transition: width .2s linear;
+}
+
+.starterSwiper .starterSwiper-pagnation .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: var(--blue2);
+    width: 35px;
+}
