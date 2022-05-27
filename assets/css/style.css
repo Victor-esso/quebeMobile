@@ -309,6 +309,9 @@ input{
     font-weight: 700;
     color: var(--black);
 }
+.fit-parent .swiper-slide .content h2 span{
+    color: var(--blue2);
+}
 
 .starterSwiper .swiper-nav{
     position: absolute;
