@@ -14,7 +14,23 @@ $(document).ready(function(){
     }); 
 
 
-    
+
+    //Full ScreenMode
+    $("#fullscreen-toggle").on('click', function() {
+        if(IsFullScreenCurrently())
+            GoOutFullscreen();
+        else
+            GoInFullscreen($('body').get(0));
+    });
+
+    $(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
+        if(IsFullScreenCurrently()) {
+            $("#fullscreen-toggle").addClass('active');
+        }
+        else {
+            $("#fullscreen-toggle").removeClass('active');
+        }
+    });
 
 
 
