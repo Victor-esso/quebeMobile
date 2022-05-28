@@ -435,9 +435,7 @@ img.v-page-bg{
     position: absolute;
     width: fit-content;
     max-width: 100%;
-    padding: 20px;
     z-index: 3;
-    border: 1px solid yellow;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
@@ -446,9 +444,99 @@ img.v-page-bg{
 .getStarted>.mid{
     top: 50%;
     transform: translate(-50%,-50%);
+    width: 100%;
 }
 
 .getStarted>.bot{
     top: unset;
     bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.getStarted>.bot button{
+    background-color: var(--blue1);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 80%;
+    padding: 1.3rem 0px;
+    border-radius: .7rem;
+}
+
+.getStarted>.top{
+    width: 80%;
+    text-align: center;
+}
+
+.getStarted>.top h1{
+    color: white;
+    font-weight: 600;
+}
+
+.getStarted>.top span{
+    color: rgba(255, 255, 255, 0.812);
+    font-size: .8rem;
+}
+
+.txt-diff>span{
+    color: var(--blue2) !important;
+    font-weight: 600;
+}
+
+.getStartedSwiper{
+    width: 100%;
+    overflow: visible;
+}
+
+.getStartedSwiper .swiper-slide{
+    background-color: rgba(252, 252, 252, 0.913);
+    width: 80%;
+    padding: 4rem 10px 4rem 10px;
+    border-radius: 20px;
+}
+
+.getStartedSwiper .swiper-slide h1{
+    font-weight: 800;
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+.getStartedSwiper .swiper-slide>span{
+    display: block;
+    text-align: center;
+    font-size: .8rem;
+    color: var(--dark-grey);
+}
+.getStartedSwiper .swiper-slide>span>span{
+    font-weight: 700;
+    color: var(--black);
+}
+
+.getStartedSwiper .swiper-slide [icon]{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    color: white;
+    font-size: .2rem;
+    transition: top .3s ease-in, opacity .7s ease, font-size .3s ease-in-out, width .3s linear, height .3s linear , background-color .3s linear;
+    display: grid;
+    place-items: center;
+}
+.getStartedSwiper .swiper-slide.swiper-slide-active [icon]{
+    top: -40px;
+    opacity: 1;
+    font-size: 1.3rem;
+    width: 50px;
+    height: 50px;
+    background-color: #2ECC71;
+    transition: top .3s ease-in, opacity .7s ease, font-size .3s ease-in-out, width .3s linear, height .3s linear , background-color .3s linear;
 }

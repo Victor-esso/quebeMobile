@@ -55,6 +55,14 @@ $(document).ready(function(){
              
     })
 
+
+    // Lets get started
+
+    const letsGetStarted = new Swiper('.getStartedSwiper',{
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 30
+    })
     
 
     
