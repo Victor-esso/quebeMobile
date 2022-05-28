@@ -355,7 +355,7 @@ input{
     width: 35px;
 }
 
-.starterSwiper .btn-skip{
+.btn-skip{
     position: absolute;
     top: 5%;
     right: 5%;
@@ -378,7 +378,7 @@ input{
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 5;
+    z-index: 50;
     color: white;
     font-size: 2rem;
 }
@@ -393,4 +393,62 @@ input{
 
 #fullscreen-toggle.active>span[active]{
     display: block;
+}
+
+
+
+
+.v-page,.v-bg-gradient{
+    width: 100%;
+    height: 100%;
+}
+
+img.v-page-bg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.v-bg-gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(40,40,40,0.6446953781512605) 0%, rgba(45,45,45,0.3449754901960784) 45%, rgba(22,22,22,0.9220063025210083) 93%);
+    z-index: 2;
+}
+
+
+
+
+
+
+.getStarted{
+    background-color: red;
+    width: 100%;
+    height: 100%;
+}
+
+.getStarted>.top ,.getStarted>.mid,.getStarted>.bot{
+    position: absolute;
+    width: fit-content;
+    max-width: 100%;
+    padding: 20px;
+    z-index: 3;
+    border: 1px solid yellow;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.getStarted>.mid{
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.getStarted>.bot{
+    top: unset;
+    bottom: 5%;
 }
