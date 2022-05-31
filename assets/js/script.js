@@ -103,18 +103,37 @@ $(document).ready(function(){
     });
 
 
-   
-    
+    // loader
+    const vAppLoader = {
+        container: $('#v-loader'),
+        content:'<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>',
+        open:function(){
+            this.container.css('top','0%');
+            this.container.html(this.content);
+        },
+        close:function(){
+            this.container.css('top','100%');
+            this.container.html(' ');
+        }
+    }
 
-    // var anim = bodymovin.loadAnimation({
-    //     container: $('#v-app')[0],
-    //     path:'https://assets9.lottiefiles.com/packages/lf20_hbdelex6.json',
-    //     renderer: 'svg', // required
-    //     loop: false, // optional
-    //     autoplay: true, // optional
-    //     name: "Demo Animation", // optional
-    // })
-    
+
+    $('.demoSubmit').each(function(){
+        $(this).submit(function(e){
+            e.preventDefault();
+            vAppLoader.open();
+
+
+            setTimeout(() => {
+                if($(this)[0].hasAttribute('href')){
+                    vAppLoader.close();
+                    window.location.href = $(this).attr('href');
+                }else{
+                    vAppLoader.close();
+                }
+            }, 3500);
+        })
+    })
 
 
 
