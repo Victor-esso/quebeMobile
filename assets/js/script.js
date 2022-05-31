@@ -126,8 +126,8 @@ $(document).ready(function(){
 
             setTimeout(() => {
                 if($(this)[0].hasAttribute('href')){
-                    vAppLoader.close();
                     window.location.href = $(this).attr('href');
+                    vAppLoader.close();
                 }else{
                     vAppLoader.close();
                 }
