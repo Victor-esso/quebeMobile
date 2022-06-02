@@ -444,7 +444,6 @@ a{
     place-items: center;
     height: fit-content;
     opacity: .2;
-    display:none;
 }
 
 #fullscreen-toggle [active]{
@@ -979,7 +978,7 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     color: var(--blue2);
 }
 
-.swiper-slide {
+.mySwiper .swiper-slide {
     font-size: 18px;
     height: auto;
     -webkit-box-sizing: border-box;
@@ -987,7 +986,7 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     padding: 30px;
 }
 
-.swiper-slide {
+.mySwiper .swiper-slide {
     font-size: 18px;
     height: auto;
     -webkit-box-sizing: border-box;
