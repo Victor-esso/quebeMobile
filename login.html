@@ -23,9 +23,6 @@
     <!-- JQuery Ui -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
-
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -36,35 +33,41 @@
         <div class="v-page registerUser d-flex flex-column ">
 
             <div class="top">
-                <a class="btn-top" left href="get_started.html"><span class="iconify" data-icon="feather:arrow-left"></span></a>
-                <a class="btn-top" right href="login.html"><span class="iconify" data-icon="majesticons:login-line"></span></a>
+                <a class="btn-top" right href="#"><span class="iconify" data-icon="feather:x"></span></a>
             </div>
 
             <div class="body scroll-y">
                 <div>
-                    <h1 class="text-center fw-bold">Splendid!</h1>
-                    <h2 class="text-center">Create your company profile, post jobs add new talents to your team.</h2>
+                    <h1 class="text-center fw-bold">Welcome back!</h1>
+                    <h2 class="text-center">Sign in to access your account</h2>
 
                     <!-- Register Form -->
-                    <form action="" class="demoSubmit" href="register_org_success.html">
-                        <div class="v-form-input">
-                            <input type="text" placeholder="username">
-                            <div icons>
-                                <!-- <span class="icon-left"><span class="iconify" data-icon="feather:user"></span></span> -->
-                            </div>
-                            <div class="error-msg active">username already exist</div>
-                        </div>
+                    <form action="" class="demoSubmit">
+                    
                         <div class="v-form-input">
                             <input type="text" placeholder="Email">
-                            <div class="error-msg ">username already exist</div>
+                            <div class="error-msg">username already exist</div>
                         </div>
                         <div class="v-form-input">
                             <input type="text" placeholder="Password">
                             <div class="error-msg">username already exist</div>
                         </div>
 
+                        
+                        <div class="d-flex justify-content-between align-items-center px-2">
+                            <div class="v-form-checkbox">
+                                <input type="checkbox" name="remember" id="remember">
+                                <label for="remember">
+                                    <div><span class="iconify" data-icon="bi:check"></span></div>
+                                    <span>Remember me</span>
+                                </label>
+                            </div>
+
+                            <a href="forgot_password.html" class="tc-blue-2 fw-bold" style="font-size:.8rem;" >Forgot Password</a>
+                        </div>
+
                         <div class="v-form-submit">
-                            <input type="submit" value="Sign-Up">
+                            <input type="submit" value="Sign-in">
                         </div>
                     </form>
 

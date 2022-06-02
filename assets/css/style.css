@@ -286,6 +286,12 @@ input{
 .tc-grey-2{
     color: var(--grey);
 }
+.tc-blue{
+    color: var(--blue2);
+}
+.tc-blue-2{
+    color: var(--blue1);
+}
 
 a{
     text-decoration: none;
@@ -763,6 +769,10 @@ img.v-page-bg{
     width: 80%;
     padding: .9rem 0px;
     border-radius: .7rem;
+    text-align: center;
+}
+a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
+    color: white;
 }
 
 .v-submit-btn-trans{
@@ -839,4 +849,66 @@ img.v-page-bg{
     place-items:center;
     transition: top .15s ease-in-out;
     backdrop-filter: blur(2px);
+}
+
+
+
+.v-form-checkbox>label>div{
+    display: grid;
+    place-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    border: 1px solid var(--blue2);
+    margin-right: .3rem;
+    font-size: .1rem;
+    color: rgba(255, 0, 0, 0);
+    transition: font-size .3s ease-in;
+}
+
+.v-form-checkbox>label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+}
+
+.v-form-checkbox>label>span{
+    font-size: .8rem;
+    color: var(--dark-grey);
+}
+
+.v-form-checkbox>input[type="checkbox"]:checked+label>div{
+    color: white;
+    background-color: var(--blue2);
+    border: 1px solid var(--blue2);
+    font-size: .8rem;
+    transition: font-size .3s ease-out;
+}
+
+.v-form-checkbox>input[type="checkbox"]:checked+label>span{
+    color: var(--black);
+}
+
+.v-form-checkbox>input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    z-index: -20;
+}
+.otpInputContainer{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.otpInputContainer>input{
+    background-color: var(--light-blue);
+    color: var(--black);
+    width: 3rem;
+    height: 3rem;
+    border-radius: .5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
