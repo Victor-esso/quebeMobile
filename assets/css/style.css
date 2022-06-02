@@ -444,6 +444,7 @@ a{
     place-items: center;
     height: fit-content;
     opacity: .2;
+    display:none;
 }
 
 #fullscreen-toggle [active]{
