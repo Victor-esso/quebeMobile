@@ -333,6 +333,16 @@ a{
     overflow-x: hidden;
 }
 
+.noselect,p,span,h1,h2,h3,h4,div {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
+  }
+
 .red{background-color: wheat;}
 .blue{background-color: aqua;}
 .yellow{background-color: coral;}
@@ -1297,7 +1307,12 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     display: none;
     
 }
-
+.like-btn{
+    display: grid;
+    place-items: center;
+    padding: .3rem .5rem;
+    z-index: 20;
+}
 .like-btn>span{
     color: rgba(140, 140, 140, 0.281);
 }

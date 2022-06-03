@@ -23,7 +23,8 @@
     <!-- JQuery Ui -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
+    <!-- AnimateCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 
     <!-- Main Style Sheet -->
@@ -129,7 +130,7 @@
                                     <a href="#">See all</a>
                                 </div>
                                 <!-- Slide -->
-                                <div class="swiper v-row-swiper gigs-slide overflow-visible" swiper-props='{"spaceBetween":15}'>
+                                <div class="swiper v-row-swiper gigs-slide overflow-visible" swiper-props='{"spaceBetween":15,"a11y":{"enabled":false}}'>
                                     <div class="swiper-wrapper">
 
                                         <div class="swiper-slide active ">
@@ -240,7 +241,7 @@
                                     <a href="#">See all</a>
                                 </div>
                                 <!-- Slide -->
-                                <div class="swiper v-row-swiper companies-slide overflow-visible" swiper-props='{"spaceBetween":15}'>
+                                <div class="swiper v-row-swiper companies-slide overflow-visible" swiper-props='{"spaceBetween":15,"a11y":{"enabled":false}}' swiper-dbclick="test">
                                     <div class="swiper-wrapper">
 
                                         <div class="swiper-slide height-equal-width ">
@@ -251,7 +252,7 @@
                                                     <span class="txt">133k Job Openings</span>
                                                 </div>
                                             </div>
-                                            <button class="grid-center like-btn" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                            <button v-animate="wobble" class="grid-center like-btn" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
                                         </div>
 
                                         <div class="swiper-slide height-equal-width ">
@@ -262,7 +263,7 @@
                                                     <span class="txt">100k Job Openings</span>
                                                 </div>
                                             </div>
-                                            <button class="grid-center like-btn active" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                            <button v-animate="wobble" class="grid-center like-btn active" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
                                         </div>
 
                                         <div class="swiper-slide height-equal-width ">
@@ -273,7 +274,7 @@
                                                     <span class="txt">100 Job Openings</span>
                                                 </div>
                                             </div>
-                                            <button class="grid-center like-btn" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                            <button v-animate="wobble" class="grid-center like-btn" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
                                         </div>
 
                                         <div class="swiper-slide height-equal-width ">
@@ -284,7 +285,7 @@
                                                     <span class="txt">13 Job Openings</span>
                                                 </div>
                                             </div>
-                                            <button class="grid-center like-btn" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                            <button v-animate="wobble" class="grid-center like-btn" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
                                         </div>
 
                                         <div class="swiper-slide height-equal-width ">
@@ -295,7 +296,7 @@
                                                     <span class="txt">12k Job Openings</span>
                                                 </div>
                                             </div>
-                                            <button class="grid-center like-btn" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                            <button v-animate="wobble" class="grid-center like-btn" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
                                         </div>
 
                                         <div class="swiper-slide height-equal-width ">
@@ -306,7 +307,7 @@
                                                     <span class="txt">133k Job Openings</span>
                                                 </div>
                                             </div>
-                                            <button class="grid-center like-btn" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                            <button v-animate="wobble" class="grid-center like-btn" toggle-class="active"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
                                         </div>
     
                                         
@@ -315,7 +316,7 @@
                             </div>
 
 
-                            <!-- Top Gigs -->
+                            <!-- Recommended for you -->
                             <div class=" v-section">
                                 <!-- Top -->
                                 <div class="top">
@@ -326,8 +327,7 @@
                                 <div class="swiper v-row-swiper gigs-slide overflow-visible" swiper-props='{"spaceBetween":15}'>
                                     <div class="swiper-wrapper">
 
-                                        <div class="swiper-slide active ">
-                                            <a href="#">
+                                        <div class="swiper-slide ">
                                                 <!-- Image -->
                                                 <div class="image">
                                                     <img src="https://images.pexels.com/photos/5244025/pexels-photo-5244025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
@@ -342,11 +342,9 @@
                                                         <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                     </div>
                                                 </div>
-                                            </a>
                                         </div>
 
                                         <div class="swiper-slide ">
-                                            <a href="#">
                                                 <!-- Image -->
                                                 <div class="image">
                                                     <img src="https://cdn.dribbble.com/users/1182822/screenshots/7090361/media/f3eaab620d28599bfabbecbc6411d4bd.png" alt="">
@@ -361,11 +359,9 @@
                                                         <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                     </div>
                                                 </div>
-                                            </a>
                                         </div>
 
                                         <div class="swiper-slide ">
-                                            <a href="#">
                                                 <!-- Image -->
                                                 <div class="image">
                                                     <img src="https://cdn.dribbble.com/users/383277/screenshots/18055765/media/e5fc935b60035305099554810357012a.png?compress=1&resize=1200x900&vertical=top" alt="">
@@ -380,11 +376,9 @@
                                                         <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                     </div>
                                                 </div>
-                                            </a>
                                         </div>
 
-                                        <div class="swiper-slide ">
-                                            <a href="#">
+                                        <div class="swiper-slide active ">
                                                 <!-- Image -->
                                                 <div class="image">
                                                     <img src="https://cdn.dribbble.com/users/10971/screenshots/17365141/media/d4a3da5a2da3665540daf4bf2312bba0.png?compress=1&resize=1200x900&vertical=top" alt="">
@@ -399,11 +393,9 @@
                                                         <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                     </div>
                                                 </div>
-                                            </a>
                                         </div>
 
                                         <div class="swiper-slide ">
-                                            <a href="#">
                                                 <!-- Image -->
                                                 <div class="image">
                                                     <img src="https://cdn.dribbble.com/users/788099/screenshots/17524051/media/2da4bcaeafb26049bfb890e9419707b7.jpg?compress=1&resize=1200x900&vertical=top" alt="">
@@ -418,7 +410,6 @@
                                                         <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                     </div>
                                                 </div>
-                                            </a>
                                         </div>
                                         
                                     </div>

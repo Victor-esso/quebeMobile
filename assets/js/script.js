@@ -189,19 +189,36 @@ $(document).ready(function(){
             loop:false,
             freeMode: true,
             centeredSlides: false,
+            a11y:{enabled:false}
         }
 
         defaultProp = (elProps) ? {...defaultProp,...elProps} : defaultProp;
         $(this).removeAttr('swiper-props')
         
         var vRowSwiper = new Swiper($(this)[0], defaultProp);
+
+        if($(this)[0].hasAttribute('swiper-dbclick')){
+            vRowSwiper.on('doubleClick',$(this).attr('swiper-dbclick'));
+        }
+        
     })
 
+
+
+    const test = (swiper,event) => {
+        console.log(event);
+    }
 
     //Toggle class
     $('[toggle-class]').each(function(){
         $(this).click(function(){
             $(this).toggleClass($(this).attr('toggle-class'));
+        })
+    })
+
+    $('[v-animate]').each(function(){
+        $(this).click(function(){
+            animateCSS($(this)[0],$(this).attr('v-animate'));
         })
     })
 
