@@ -1,6 +1,10 @@
 $(document).ready(function(){
 
-
+    //height equal width
+    $('.height-equal-width').each(function(){
+        $(this).css('height',$(this).css('width'));
+    })
+    
     // Update the height of the page
     const updatePageHeight = () =>{
 
@@ -162,15 +166,44 @@ $(document).ready(function(){
         });
     });
 
-    var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        slidesPerView: "auto",
-        freeMode: true,
-        scrollbar: {
-          el: ".swiper-scrollbar",
-        },
-        mousewheel: true,
-      });
+
+    //Slick one page sroll
+    $('.v-slick-page').each(function(){
+        vSlickPage = new Swiper($(this)[0], {
+            direction: "vertical",
+            slidesPerView: "auto",
+            freeMode: true,
+            scrollbar: {
+              el: ".swiper-scrollbar",
+            },
+            mousewheel: true,
+          });
+    })
+
+    //
+    $('.v-row-swiper').each(function(){
+        elProps = isJson($(this).attr('swiper-props')) ? JSON.parse($(this).attr('swiper-props')) : false;
+        defaultProp = {
+            direction:'horizontal',
+            slidesPerView:'auto',
+            loop:false,
+            freeMode: true,
+            centeredSlides: false,
+        }
+
+        defaultProp = (elProps) ? {...defaultProp,...elProps} : defaultProp;
+        $(this).removeAttr('swiper-props')
+        
+        var vRowSwiper = new Swiper($(this)[0], defaultProp);
+    })
+
+
+    //Toggle class
+    $('[toggle-class]').each(function(){
+        $(this).click(function(){
+            $(this).toggleClass($(this).attr('toggle-class'));
+        })
+    })
 
 
 
