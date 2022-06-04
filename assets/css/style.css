@@ -328,6 +328,11 @@ a{
     text-decoration: none;
 }
 
+.bg-dark-blue{
+    background-color: var(--blue1) !important;
+    color: white !important;
+}
+
 .scroll-y{
     overflow-y: scroll;
     overflow-x: hidden;
@@ -665,6 +670,12 @@ img.v-page-bg{
 
 }
 
+.page-title-top{
+    color: var(--black);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
 .v-page>.bottom{
     height: 10%;
     position: relative;
@@ -901,7 +912,16 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     backdrop-filter: blur(2px);
 }
 
+.vPages{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 20;
+    transition: top .15s ease-in-out;
 
+}
 
 .v-form-checkbox>label>div{
     display: grid;
@@ -963,7 +983,7 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     font-weight: 700;
 }
 
-.top-noti{
+.top-noti,.top-right{
     display: grid;
     place-items: center;
     width: 50px;
@@ -974,10 +994,10 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     color: var(--black);
     position: relative;
 }
-.top-noti:hover{
+.top-noti:hover,.top-right:hover,.top-left:hover{
     background-color: rgba(158, 158, 158, 0.067);
 }
-.top-noti.active::after{
+.top-noti.active::after, .top-right.active::after{
     content: '';
     position: absolute;
     width: 10px;
@@ -988,7 +1008,19 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     right: 25%;
 }
 
-.main-nav{
+.top-left{
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    margin-right: .6rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    position: relative;
+}
+
+.main-nav,.main-nav:visited{
     font-size: 1.6rem;
     color: var(--grey);
     border-top: 2px solid rgba(255, 0, 0, 0);
@@ -999,9 +1031,6 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
 .main-nav.active{
     color: var(--blue1);
     border-color: var(--blue1);
-}
-.main-nav:active,.main-nav:hover{
-    color: var(--blue2);
 }
 
 .v-slick-page>.swiper-wrapper>.swiper-slide{
@@ -1330,4 +1359,14 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     right: 7%;
     z-index: 2;
     font-size: 1.6rem;
+}
+
+.vSwiperMainPage{
+    width: 100%;
+    height: 100%;
+}
+
+
+.category-list{
+    background-color: white;
 }

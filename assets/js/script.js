@@ -1,3 +1,7 @@
+
+
+
+
 $(document).ready(function(){
 
     //height equal width
@@ -180,7 +184,8 @@ $(document).ready(function(){
           });
     })
 
-    //
+
+    // making row swiper
     $('.v-row-swiper').each(function(){
         elProps = isJson($(this).attr('swiper-props')) ? JSON.parse($(this).attr('swiper-props')) : false;
         defaultProp = {
@@ -189,7 +194,8 @@ $(document).ready(function(){
             loop:false,
             freeMode: true,
             centeredSlides: false,
-            a11y:{enabled:false}
+            a11y:{enabled:false},
+            nested:true,
         }
 
         defaultProp = (elProps) ? {...defaultProp,...elProps} : defaultProp;
@@ -197,39 +203,148 @@ $(document).ready(function(){
         
         var vRowSwiper = new Swiper($(this)[0], defaultProp);
 
+
+        //Request double click
         if($(this)[0].hasAttribute('swiper-dbclick')){
-            vRowSwiper.on('doubleClick',$(this).attr('swiper-dbclick'));
+            var dbFunc = $(this).attr('swiper-dbclick');
+            vRowSwiper.on('doubleClick',function(swiper,event){
+                window[dbFunc](swiper,event);            
+            });
         }
         
     })
 
+    
+    //Clicking on the like button
+   $('button.like-btn').each(function(){
+       $(this).click(function(){
+           handleLike($(this)[0]);
+       })
+   }) 
 
 
-    const test = (swiper,event) => {
-        console.log(event);
-    }
+    
+   const vSwiperMainPage = new Swiper(".vSwiperMainPage", {
+        spaceBetween: 30,
+        hashNavigation: {
+            watchState: true,
+        },
+        followFinger:false,
+        speed:200,
+        threshold:25,
+        on:{
+            init:function(swiper){
+                updateNav(swiper);
+            },
+            slideChange:function(swiper){
+                updateNav(swiper);
+            },
+        }
+  });
 
-    //Toggle class
-    $('[toggle-class]').each(function(){
-        $(this).click(function(){
-            $(this).toggleClass($(this).attr('toggle-class'));
-        })
+  $('.trigger-history-back').each(function(){
+    $(this).click(()=>backHistory());
+  });
+
+
+  $('[check]').click(function(){
+     el = $('.v-loader');
+     vPages.open(el);
+  });
+
+  $('[check2]').click(function(){
+    el = $('.v-loader2');
+    vPages.open(el);
+ });
+
+ 
+
+
+ //Handle Pages
+  const vPages = {
+      open:function(el,animation="fadeInUp"){
+       
+        //Setting up page key
+        if(!el[0].hasAttribute('v-page-key')){
+            pageKey = key(20);
+            el.attr('v-page-key',pageKey);
+        }else{
+            pageKey = el.attr('v-page-key');
+        }
+       //push to history
+       this.setKey(pageKey);
+       history.pushState({pageKey},'',`#${pageKey}`);
+
+
+
+
+        el.css('transition','unset');
+        el.css('top',0);
+        el.attr('vPageOpened');
+        animateCSS(el[0],animation,'0.3s');
+
+      },
+      close:function(el,animation="fadeOutDown"){
+        animateCSS(el[0],animation,'0.3s').then(function(){
+            el.css('top','100%');
+            el.removeAttr('vPageOpened')
+        });
+
+        this.popKey();
+      },
+      onload:function(){
+          sessionStorage.setItem('vPagesHistory',JSON.stringify([]));
+      },
+      setKey:function(key){
+          let pageArray = JSON.parse(sessionStorage.getItem('vPagesHistory'));
+          pageArray[pageArray.length] = key;
+          sessionStorage.setItem('vPagesHistory',JSON.stringify(pageArray));
+          this.currentKey = key;
+      },
+      currentKey:false,
+      popKey:function(){
+        let pageArray = JSON.parse(sessionStorage.getItem('vPagesHistory'));
+        pageArray.pop();
+        if(pageArray.length){
+            this.currentKey = pageArray[pageArray.length - 1];
+        }else{
+            this.currentKey = false;
+        }
+
+      },
+      closeAllPages:function(){
+          $('[vPages]').each(function(){
+            if($(this)[0].hasAttribute('vPageOpened')){
+                $(this).css('top','100%');
+                $(this).removeAttr('vPageOpened');
+            }
+          })
+      }
+      
+
+  }
+
+  vPages.onload();
+
+  window.addEventListener('popstate',e => {
+        if(vPages.currentKey){
+            vPages.close($('[v-page-key="'+vPages.currentKey+'"]'));
+        }else{
+            vPages.closeAllPages();
+        }
+  });
+
+
+$('.v-link-page').each(function(){
+    $(this).click(function(e){
+        e.preventDefault();
+        let pageCalled = $(this)[0].hasAttribute('vref') ? $(this).attr('vref') : false;
+        pageCalled = pageCalled ? $('[vpage-name="'+pageCalled+'"]') : false;
+        console.log(pageCalled);
+        vPages.open(pageCalled);
+        
     })
-
-    $('[v-animate]').each(function(){
-        $(this).click(function(){
-            animateCSS($(this)[0],$(this).attr('v-animate'));
-        })
-    })
-
-
-
-
-
-
-
-
-
+})
 
 
 
