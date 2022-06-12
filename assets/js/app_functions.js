@@ -9,6 +9,15 @@ window.handleCompanyLike = function (swiper,event){
     handleLike(likeBtn);
 }
 
+window.handleTabChangeSearch = function (swiper){
+    //Reset active
+    $('.search-tab-nav').children('a').removeClass('active');
+    el = swiper.slides[swiper.activeIndex];
+    //console.log('a[href="#'+el.getAttribute('data-hash')+'"]')
+    $('a[href="#'+el.getAttribute('data-hash')+'"]').addClass('active');
+}
+
+
 
 
 

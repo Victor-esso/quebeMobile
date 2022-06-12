@@ -211,6 +211,15 @@ $(document).ready(function(){
                 window[dbFunc](swiper,event);            
             });
         }
+        //Request double click
+        if($(this)[0].hasAttribute('swiper-change')){
+            var dbFunc = $(this).attr('swiper-change');
+            console.log(dbFunc)
+            vRowSwiper.on('slideChange',function(swiper){
+                window[dbFunc](swiper);     
+                     
+            });
+        }
         
     })
 
@@ -347,6 +356,11 @@ $('.v-link-page').each(function(){
 })
 
 
+$('.preventDefault').each(function(){
+    $(this).click(function(e){
+        e.preventDefault;
+    })
+})
 
 
 

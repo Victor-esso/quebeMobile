@@ -34,7 +34,7 @@
 <body v-fixedHeight>
     <div id="v-app">
         <!-- Main Page -->
-        <div class="v-page d-flex flex-column victor ">
+        <div class="v-page d-flex flex-column ">
             <!-- Top -->
             <div class="top grid-center height-fit-content ">
 
@@ -485,13 +485,196 @@
         <div id="v-loader"></div>
 
         <div class="v-page vPages category-list d-flex flex-column" vpage-name="category-list">
-            <div class="top">
+            <!-- Top -->
+            <div class="top grid-center d-flex px-4 py-2 border">
                 <button class="trigger-history-back btn-top" left><span class="iconify" data-icon="feather:arrow-left"></span></button>
                 <h2 class="page-title-top" middle>Categories</h2>
                 <button class="btn-top" right><span class="iconify" data-icon="feather:search"></span></button>
             </div>
-            <div class="body"></div>
-            <div class="bottom"></div>
+
+            <!-- Body -->
+            <div class="body scroll-y">
+                <!-- Swiper -->
+                <div class="swiper v-slick-page width-100 height-100">
+                    <div class="swiper-wrapper">
+                        <!-- Body Inner -->
+                        <div class="swiper-slide height-auto">
+
+                            <div class="width-100 category-slide d-flex justify-content-between flex-wrap ">
+
+                                <div class="swiper-slide height-equal-width grid-center mb-3">
+                                    <a href="#" class="width-100 height-100 grid-center v-link-page" vref="sub-category-list">
+                                        <div class="width-100">
+                                            <div class="icon blue height-equal-width"><span class="iconify" data-icon="feather:pen-tool"></span></div>
+                                            <span class="txt fw-bold">Graphics & Design</span>
+                                            <span class="txt">Logo & Brand identity, Art & Illustration</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide height-equal-width grid-center mb-3">
+                                    <a href="#" class="width-100 height-100 grid-center">
+                                        <div class="width-100">
+                                            <div class="icon black height-equal-width"><span class="iconify" data-icon="feather:monitor"></span></div>
+                                            <span class="txt fw-bold">Digital Marketing</span>
+                                            <span class="txt">Social Media Marketing, Social Media Advertising</span>
+                                        </div>
+                                    </a>                                        
+                                </div>
+
+                                <div class="swiper-slide height-equal-width grid-center mb-3">
+                                    <a href="#" class="width-100 height-100 grid-center">
+                                        <div class="width-100">
+                                            <div class="icon orange height-equal-width"><span class="iconify" data-icon="feather:edit-2"></span></div>
+                                            <span class="txt fw-bold">Writing & Translation</span>
+                                            <span class="txt">Article & Blog Posts, Translation</span>
+                                        </div>                                        
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide height-equal-width grid-center mb-3">
+                                    <a href="#" class="width-100 height-100 grid-center">
+                                        <div class="width-100">
+                                            <div class="icon blue2 height-equal-width"><span class="iconify" data-icon="feather:video"></span></div>
+                                            <span class="txt fw-bold">Video & Animation</span>
+                                            <span class="txt">Video Edititing, Short Video Ads</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide height-equal-width grid-center mb-3">
+                                    <a href="#" class="width-100 height-100 grid-center">
+                                        <div class="width-100">
+                                            <div class="icon yellow height-equal-width"><span class="iconify" data-icon="feather:music"></span></div>
+                                            <span class="txt fw-bold">Music & Audio</span>
+                                            <span class="txt">Voice Over, Producers & Composers</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide height-equal-width grid-center mb-3">
+                                    <a href="#" class="width-100 height-100 grid-center">
+                                        <div class="width-100">
+                                            <div class="icon pink height-equal-width"><span class="iconify" data-icon="feather:code"></span></div>
+                                            <span class="txt fw-bold">Programming & Teach</span>
+                                            <span class="txt">Wordpress, Websites Builders & CMS</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide height-equal-width grid-center mb-3">
+                                    <a href="#" class="width-100 height-100 grid-center">
+                                        <div class="width-100">
+                                            <div class="icon green height-equal-width"><span class="iconify" data-icon="feather:database"></span></div>
+                                            <span class="txt fw-bold">Data</span>
+                                            <span class="txt">Database, Data Processing</span>
+                                        </div>                                        
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide height-equal-width grid-center mb-3">
+                                    <a href="#" class="width-100 height-100 grid-center">
+                                        <div class="width-100">
+                                            <div class="icon teal height-equal-width"><span class="iconify" data-icon="feather:edit-2"></span></div>
+                                            <span class="txt fw-bold">Business</span>
+                                            <span class="txt">Virtual Assistant, Marketing Research</span>
+                                        </div>                                        
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide height-equal-width grid-center mb-3">
+                                    <a href="#" class="width-100 height-100 grid-center">
+                                        <div class="width-100">
+                                            <div class="icon purple height-equal-width"><span class="iconify" data-icon="feather:coffee"></span></div>
+                                            <span class="txt fw-bold">Lifestyle</span>
+                                            <span class="txt">Online Tutoring, Gaming</span>
+                                        </div>                                        
+                                    </a>
+                                </div>
+
+                            </div>
+                            
+
+
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="v-page vPages category-list d-flex flex-column" vpage-name="sub-category-list">
+            <!-- Top -->
+            <div class="top grid-center d-flex px-4 py-2 border height-fit-content">
+                <div class="category-title grid-center">
+                    
+                            <div class="width-fit-content d-flex justify-content-center align-items-center">
+                                <div class="icon blue height-equal-width"><span class="iconify" data-icon="feather:pen-tool"></span></div>
+                                <div class="ms-3">
+                                    <span class="txt fw-bold font-size-3 text-start">Graphics & Design</span>
+                                    <span class="txt text-start">Explore millions of creative talents</span>
+                                </div>
+                            </div>
+                </div>
+                <button class="trigger-history-back btn-top" left ><span class="iconify" data-icon="feather:arrow-left"></span></button>
+                <button class="btn-top" right ><span class="iconify" data-icon="feather:search"></span></button>
+            </div>
+
+            <!-- Body -->
+            <div class="body scroll-y">
+                <!-- Swiper -->
+                <div class="swiper v-slick-page width-100 height-100">
+                    <div class="swiper-wrapper">
+                        <!-- Body Inner -->
+                        <div class="swiper-slide height-auto">                     
+
+                            <div class="sub-category-list">
+                                <h2>LOGO & BRAND IDENTITY</h2>
+                                <ul>
+                                    <li><a href="#"><span>Logo Design</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>Brand Style Guides</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>Fonts & Typography</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>Business Cards & Stationery</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>                                    
+                                </ul>
+                            </div>
+
+                            <div class="sub-category-list">
+                                <h2>Art & Illustration</h2>
+                                <ul>
+                                    <li><a href="#"><span>Illustration</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>NFT Art</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>Pattern Design</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>Portraits & Caricature</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>                                    
+                                    <li><a href="#"><span>Cartoons & Comics</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>                                    
+                                    <li><a href="#"><span>Tatoo Design</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>                                    
+                                </ul>
+                            </div>
+
+                            <div class="sub-category-list">
+                                <h2>Packaging & Covers</h2>
+                                <ul>
+                                    <li><a href="#"><span>Packaging & Label Design</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>book design</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>album cover design</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>car wraps</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>                                    
+                                </ul>
+                            </div>
+
+                            <div class="sub-category-list">
+                                <h2>gaming</h2>
+                                <ul>
+                                    <li><a href="#"><span>gaming art</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>graphics for streamers</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>twitch store</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>
+                                    <li><a href="#"><span>Business Cards & Stationery</span> <span icon><span class="iconify" data-icon="feather:chevron-right"></span></span></a></li>                                    
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                </div>
+            </div>
         </div>
 
     </div>
