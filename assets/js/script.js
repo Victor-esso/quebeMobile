@@ -255,6 +255,14 @@ $(document).ready(function(){
     $(this).click(()=>backHistory());
   });
 
+  $('.trigger-back').each(function(){
+    $(this).click(function(e){
+       if(e.target.classList.contains('trigger-back')){
+        backHistory()
+       }
+    });
+  });
+
 
   $('[check]').click(function(){
      el = $('.v-loader');
@@ -349,7 +357,6 @@ $('.v-link-page').each(function(){
         e.preventDefault();
         let pageCalled = $(this)[0].hasAttribute('vref') ? $(this).attr('vref') : false;
         pageCalled = pageCalled ? $('[vpage-name="'+pageCalled+'"]') : false;
-        console.log(pageCalled);
         vPages.open(pageCalled);
         
     })
@@ -362,7 +369,10 @@ $('.preventDefault').each(function(){
     })
 })
 
-
+$('.rev-select[top]').each(function(){
+    opt = $(this).children('.select-options');
+    opt.css('top',`-${parseFloat(opt.css('height'))+6}px`);
+})
 
 
 

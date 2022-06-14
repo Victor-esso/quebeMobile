@@ -88,3 +88,14 @@ const backHistory = () =>{
 const forwardHistory = () =>{
     history.forward();
 }
+
+
+// custom select
+$('.custom-select').each(function(){
+    shouldAttach = isUndefined($(this).attr('xxx-custom-select'))?true:false;// verify if element is marked
+    if(shouldAttach){
+        $(this).RevSelectBox();
+        $(this).attr('xxx-custom-select','yes');
+        //console.log($(this).attr('name'));
+    }
+});

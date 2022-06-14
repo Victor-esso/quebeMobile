@@ -1,0 +1,123 @@
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.rev-select {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  
+}
+.select-styled {
+  width: 100%;
+  background-color: var(--light-blue);
+  color: var(--black);
+  font-size: .9rem;
+  font-weight: 600;
+  padding: .9rem 1.5rem;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  height: 52.78px;
+  
+}
+.select-styled [icon]{
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+}
+.select-styled [icon] [up],.select-styled [icon] [down]{
+  display: grid;
+}
+.select-styled [icon] [up]{
+  display: none;
+}
+.select-styled.active [icon] [up]{
+  display: grid;
+}
+.select-styled.active [icon] [down]{
+  display: none;
+}
+
+.select-styled>span{
+  display: flex;
+  align-items: center;
+  font-size: .85rem;
+  font-weight: 800;
+}
+
+.select-styled>span>[side-icon]{
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  margin-right: .5rem;
+}
+
+.select-styled::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  display: none;
+}
+
+.select-styled:hover {
+  background-color: var(--light-blue);
+}
+
+.select-styled:active,
+.select-styled.active {
+  background-color: var(--light-blue);
+}
+
+.select-styled.active::after {
+  top: 9px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: white;  
+  color: var(--black);
+  border-radius: .5rem;
+  box-shadow: var(--shadow-elevation-medium);
+  border: 1px solid var(--light-blue);
+}
+
+.rev-select[top] .select-options{
+  top: -110%;
+}
+
+.select-options li {
+  margin: 0;
+  padding: 12px 0;
+  text-indent: 15px;
+  border-top: 0px solid var(--light-blue);  
+  font-size: .9rem;
+}
+
+.select-options li:hover {
+  background-color: var(--light-blue);  
+  color: var(--black);
+}
+
+.select-options li[rel="hide"] {
+  display: none;
+}

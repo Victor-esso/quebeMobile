@@ -26,6 +26,9 @@
     <!-- AnimateCSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+    <!-- Custome Select Box -->
+    <link rel="stylesheet" href="assets/custom-select/css/style.css">
+
 
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -46,7 +49,7 @@
                                 <div class="v-form-input icon-left mb-0"><input type="text" placeholder="Search services"><div icons><span class="icon-left grey font-size-6"><span class="iconify" data-icon="feather:search"></span></span></div></div>
                             </form>
                         </div>
-                        <button class="top-right"><span class="iconify" data-icon="feather:sliders"></span></button>
+                        <button class="top-right v-link-page" vref="buyer-search-filter"><span class="iconify" data-icon="feather:sliders"></span></button>
                     </div>
 
                 <!-- Filter keys -->
@@ -77,18 +80,16 @@
                         <!-- Gigs TAB -->
                         <div class="swiper-slide" data-hash="search_gigs">
 
-                            <div class="swiper v-row-swiper width-100 height-100 gigs-slide-vertical px-0" swiper-props='{"direction":"vertical"}' swiper-dbclick="handleCompanyLike">
+                            <div class="swiper v-row-swiper width-100 height-100 gigs-slide-vertical px-0" swiper-props='{"direction":"vertical","mousewheel":true}' swiper-dbclick="handleCompanyLike">
                                 <div class="swiper-wrapper">
                                     <!-- Body Inner -->
                                     <div class="swiper-slide">
                                         <a href="#">
                                             <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
                                             <div class="details">
-                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
-                                                <span class="level">Level 3</span>
-                                                <p class=" description txt-line-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus corporis laboriosam sapiente doloribus cumque quidem delectus quia? Quod doloribus, reiciendis esse aut sed illum iusto consectetur aliquam nemo dolorum.</p>
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="price-range">From $120k</span>
+                                                    <span class="price-range fw-700">From $120k</span>
                                                     <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                 </div>
                                             </div>
@@ -98,13 +99,11 @@
                                     
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="photo"><img src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
                                             <div class="details">
-                                                <h2 class=" title txt-line-1">Tina Tune</h2>
-                                                <span class="level">Level 3</span>
-                                                <p class=" description txt-line-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus corporis laboriosam sapiente doloribus cumque quidem delectus quia? Quod doloribus, reiciendis esse aut sed illum iusto consectetur aliquam nemo dolorum.</p>
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="price-range">From $120k</span>
+                                                    <span class="price-range fw-700">From $120k</span>
                                                     <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                 </div>
                                             </div>
@@ -114,13 +113,11 @@
                                     
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="photo"><img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
                                             <div class="details">
-                                                <h2 class=" title txt-line-1">Peter Was</h2>
-                                                <span class="level">Level 3</span>
-                                                <p class=" description txt-line-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus corporis laboriosam sapiente doloribus cumque quidem delectus quia? Quod doloribus, reiciendis esse aut sed illum iusto consectetur aliquam nemo dolorum.</p>
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="price-range">From $120k</span>
+                                                    <span class="price-range fw-700">From $120k</span>
                                                     <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                 </div>
                                             </div>
@@ -130,13 +127,11 @@
                                     
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="photo"><img src="https://images.pexels.com/photos/3408420/pexels-photo-3408420.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
                                             <div class="details">
-                                                <h2 class=" title txt-line-1">Ragnar Love</h2>
-                                                <span class="level">Level 3</span>
-                                                <p class=" description txt-line-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus corporis laboriosam sapiente doloribus cumque quidem delectus quia? Quod doloribus, reiciendis esse aut sed illum iusto consectetur aliquam nemo dolorum.</p>
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="price-range">From $120k</span>
+                                                    <span class="price-range fw-700">From $120k</span>
                                                     <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                 </div>
                                             </div>
@@ -146,13 +141,11 @@
                                     
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="photo"><img src="https://images.pexels.com/photos/1181742/pexels-photo-1181742.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
                                             <div class="details">
-                                                <h2 class=" title txt-line-1">Emily Rainer</h2>
-                                                <span class="level">Level 3</span>
-                                                <p class=" description txt-line-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus corporis laboriosam sapiente doloribus cumque quidem delectus quia? Quod doloribus, reiciendis esse aut sed illum iusto consectetur aliquam nemo dolorum.</p>
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="price-range">From $120k</span>
+                                                    <span class="price-range fw-700">From $120k</span>
                                                     <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                 </div>
                                             </div>
@@ -162,13 +155,11 @@
                                     
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="photo"><img src="https://images.pexels.com/photos/3466163/pexels-photo-3466163.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
                                             <div class="details">
-                                                <h2 class=" title txt-line-1">Josh Stones</h2>
-                                                <span class="level">Level 3</span>
-                                                <p class=" description txt-line-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus corporis laboriosam sapiente doloribus cumque quidem delectus quia? Quod doloribus, reiciendis esse aut sed illum iusto consectetur aliquam nemo dolorum.</p>
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="price-range">From $120k</span>
+                                                    <span class="price-range fw-700">From $120k</span>
                                                     <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                 </div>
                                             </div>
@@ -178,13 +169,11 @@
                                     
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="photo"><img src="https://images.pexels.com/photos/3916455/pexels-photo-3916455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
                                             <div class="details">
-                                                <h2 class=" title txt-line-1">Lisa Andrews</h2>
-                                                <span class="level">Level 3</span>
-                                                <p class=" description txt-line-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus corporis laboriosam sapiente doloribus cumque quidem delectus quia? Quod doloribus, reiciendis esse aut sed illum iusto consectetur aliquam nemo dolorum.</p>
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="price-range">From $120k</span>
+                                                    <span class="price-range fw-700">From $120k</span>
                                                     <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                 </div>
                                             </div>
@@ -194,19 +183,61 @@
                                     
                                     <div class="swiper-slide">
                                         <a href="#">
-                                            <div class="photo"><img src="https://images.pexels.com/photos/1139743/pexels-photo-1139743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
                                             <div class="details">
-                                                <h2 class=" title txt-line-1">Clint Bling</h2>
-                                                <span class="level">Level 3</span>
-                                                <p class=" description txt-line-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus corporis laboriosam sapiente doloribus cumque quidem delectus quia? Quod doloribus, reiciendis esse aut sed illum iusto consectetur aliquam nemo dolorum.</p>
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <span class="price-range">From $120k</span>
+                                                    <span class="price-range fw-700">From $120k</span>
                                                     <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
                                                 </div>
                                             </div>
                                         </a>
                                         <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
                                     </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range fw-700">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range fw-700">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <p class=" description txt-line-2 fw-600 ">I can manage and create content for your instagram account</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range fw-700">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    
                                 </div>
                                 <div class="swiper-scrollbar" style="opacity:.3;"></div>
                             </div>
@@ -215,6 +246,190 @@
 
                         <!-- Seller Tabs -->
                         <div class="swiper-slide" data-hash="search_sellers">
+
+                            <div class="swiper v-row-swiper width-100 height-100 gigs-slide-vertical px-0" swiper-props='{"direction":"vertical","mousewheel":true}' swiper-dbclick="handleCompanyLike">
+                                <div class="swiper-wrapper">
+                                    <!-- Body Inner -->
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <div class="photo"><img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                                            <div class="details">
+                                                <h2 class=" title txt-line-1">Eric McDonald</h2>
+                                                <span class="level">Level 3</span>
+                                                <p class=" description txt-line-2">360 Completed Jobs</p>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="price-range">From $120k</span>
+                                                    <div class="star-rate"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <button  class="grid-center like-btn"><span ><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                            </div>
 
                         </div>
                     </div>
@@ -234,9 +449,109 @@
 
         </div>
 
-        <div id="v-loader">
-            
+        <!-- Filter Page -->
+        <div class="v-page vPages buyer-search-filter trigger-back" vpage-name="buyer-search-filter">
+
+            <div class="inner">
+                <div class="main">
+
+                    <div class="swiper v-slick-page width-100 height-100">
+                        <div class="swiper-wrapper">
+                            <!-- Body Inner -->
+                            <div class="swiper-slide height-auto" style="padding:1rem 2.5rem ;">
+                                <!-- PAGE TITLE -->
+                                <h1 class="title">Set Filters</h1>
+
+                                <form action="">
+                                    <div class="v-form-select">
+                                        <label for="categories">categories</label>
+                                        <select name="categories" id="categories" class="custom-select" icon='<span class="iconify" data-icon="feather:code"></span>'>
+                                            <option value="develoment">Development</option>
+                                            <option value="Digital Marketing">Digital Marketing</option>
+                                            <option value="Writing">Writing</option>
+                                            <option value="Video">Video</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="v-form-select">
+                                        <label for="sub_categories">Sub Category</label>
+                                        <select name="sub_categories" id="sub_categories" class="custom-select" icon='<span class="iconify" data-icon="feather:code"></span>'>
+                                            <option value="develoment">Front-End Development</option>
+                                            <option value="Digital Marketing">Digital Marketing</option>
+                                            <option value="Writing">Writing</option>
+                                            <option value="Video">Video</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="v-form-select">
+                                        <label for="location">location</label>
+                                        <select name="location" id="location" class="custom-select" icon='<span class="iconify" data-icon="feather:map-pin"></span>'>
+                                            <option value="develoment">Abuja, Nigeria</option>
+                                            <option value="Digital Marketing">Lagos, Nigeria</option>
+                                            <option value="Writing">Delta, Nigeria</option>
+                                            <option value="Video">Ondo, Nigeria</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="v-form-select">
+                                        <label for="location">Price</label>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="v-form-input me-3">
+                                                <input type="text" placeholder="Min">
+                                            </div>
+                                            <div class="v-form-input ms-3">
+                                                <input type="text" placeholder="Max">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="v-form-select">
+                                        <label for="level">seller leverl</label>
+                                        <select name="level" id="level" class="custom-select">
+                                            <option value="develoment">Entry Level</option>
+                                            <option value="Digital Marketing">Lagos, Nigeria</option>
+                                            <option value="Writing">Delta, Nigeria</option>
+                                            <option value="Video">Ondo, Nigeria</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="v-form-select">
+                                        <label for="time">Delivery time</label>
+                                        <select name="time" id="time" class="custom-select" top>
+                                            <option value="develoment">3 Days</option>
+                                            <option value="Digital Marketing">Lagos, Nigeria</option>
+                                            <option value="Writing">Delta, Nigeria</option>
+                                            <option value="Video">Ondo, Nigeria</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="v-form-select">
+                                        <label for="sort">sort by</label>
+                                        <select name="sort" id="sort" class="custom-select" top>
+                                            <option value="develoment">Relevance</option>
+                                            <option value="Digital Marketing">Lagos, Nigeria</option>
+                                            <option value="Writing">Delta, Nigeria</option>
+                                            <option value="Video">Ondo, Nigeria</option>
+                                        </select>
+                                    </div>
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <button class="v-submit-btn-default trigger-back">Show Results</button>
+                </div>
+            </div>
+
         </div>
+
     </div>
 
 
@@ -286,6 +601,9 @@
 
     <!-- Lotti Player -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Custome Select Box -->
+    <script src="assets/custom-select/js/custom-selectbox.js"></script>
 
 
     <script src="assets/js/functions.js"></script>
