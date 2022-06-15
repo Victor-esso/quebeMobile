@@ -47,14 +47,14 @@
 .select-styled>span{
   display: flex;
   align-items: center;
-  font-size: .85rem;
-  font-weight: 800;
+  font-size: .75rem;
+  font-weight: 600;
 }
 
 .select-styled>span>[side-icon]{
   display: grid;
   place-items: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-right: .5rem;
 }
 
@@ -107,10 +107,10 @@
 
 .select-options li {
   margin: 0;
-  padding: 12px 0;
+  padding: 10px 0;
   text-indent: 15px;
   border-top: 0px solid var(--light-blue);  
-  font-size: .9rem;
+  font-size: .7rem;
 }
 
 .select-options li:hover {
