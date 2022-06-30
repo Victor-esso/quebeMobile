@@ -176,6 +176,8 @@ $(document).ready(function(){
         vSlickPage = new Swiper($(this)[0], {
             direction: "vertical",
             slidesPerView: "auto",
+            autoHeight:true,
+            observer:true,
             freeMode: true,
             scrollbar: {
               el: ".swiper-scrollbar",
@@ -373,6 +375,102 @@ $('.rev-select[top]').each(function(){
     opt = $(this).children('.select-options');
     opt.css('top',`-${parseFloat(opt.css('height'))+6}px`);
 })
+
+
+
+
+// TabMaker
+$('.tab-content-maker').each(function(){
+    var tabBtns = $(this).children('.tab-btns');
+    const resetTabContentContainer = (btns) =>{
+        btns.each(function(){
+            if($(this)[0].hasAttribute('for') && $('#'+$(this).attr('for')).length){
+                $('#'+$(this).attr('for')).css('display','none');
+            }
+        })
+    }
+    const resetTabContentBtns = (btns) =>{
+        btns.each(function(){
+            $(this).removeClass('active');
+        })
+    }
+
+    //Selecting the active btn and tab
+    resetTabContentContainer(tabBtns);
+    tabBtns.each(function(){
+        if($(this).hasClass('active') && $(this)[0].hasAttribute('for') && $('#'+$(this).attr('for')).length){
+            $('#'+$(this).attr('for')).css('display','block');
+        }
+    })
+
+    tabBtns.each(function(){
+        $(this).click(function(){
+            resetTabContentBtns(tabBtns);
+            $(this).addClass('active')
+
+            if($(this)[0].hasAttribute('for') && $('#'+$(this).attr('for')).length){
+                resetTabContentContainer(tabBtns);
+                $('#'+$(this).attr('for')).css('display','block');
+            }
+        })
+    })
+})
+
+
+//Accordion
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+accordionItemHeaders.forEach(accordionItemHeader => {
+  accordionItemHeader.addEventListener("click", event => {
+    
+    // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
+    
+    if(accordionItemHeader.parentElement.parentElement.classList.contains("single-accordion")){
+        const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
+        if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
+        currentlyActiveAccordionItemHeader.classList.toggle("active");
+        currentlyActiveAccordionItemHeader.parentElement.classList.toggle("active");
+        currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+        }
+    }
+
+    accordionItemHeader.classList.toggle("active");
+    accordionItemHeader.parentElement.classList.toggle("active");
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    if(accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    }
+    else {
+      accordionItemBody.style.maxHeight = 0;
+    }
+    
+  });
+});
+
+
+// Update Swiper on touch or click
+$('[swiper-update-ontouch]').each(function(){
+    swiperupdate = $(this)[0].swiper;
+    swiperupdate.on('click', function (swiper, event) {
+        swiper.update();
+        setTimeout(function(){
+            swiper.update();
+        },200);
+    });
+    // swiperupdate.on('touchStart', function (swiper, event) {
+    //     swiper.update();
+    //     setTimeout(function(){
+    //         swiper.update();
+    //     },400);
+    // });
+})
+
+
+
+
+
+
+
 
 
 
