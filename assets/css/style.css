@@ -241,6 +241,13 @@ input{
 .radius-100p{
     border-radius: 100%;
 }
+.line-height-auto{
+    line-height: unset !important;
+}
+
+.font-size-inherit{
+    font-size: inherit !important;
+}
 
 .font-size-1{
     font-size: .5rem !important;
@@ -248,8 +255,14 @@ input{
 .font-size-2{
     font-size: .7rem !important;
 }
+.font-size-2x5{
+    font-size: .8rem !important;
+}
 .font-size-3{
     font-size: .9rem !important;
+}
+.font-size-3x5{
+    font-size: .95rem !important;
 }
 .font-size-4{
     font-size: 1rem !important;
@@ -338,6 +351,9 @@ input{
 .grid-center{
     display: grid;
     place-items: center;
+}
+.tc-inherit{
+    color: inherit !important;
 }
 .tc-black{
     color: var(--black);
@@ -876,7 +892,7 @@ img.v-page-bg{
 
 .v-form-input>input+[icons]{
     position: absolute;
-    top:0;
+    bottom:0;
     left: 0;
     width: 100%;
     height: 0 !important;
@@ -892,7 +908,7 @@ img.v-page-bg{
 
 .v-form-input.icon-left>input+[icons] .icon-left{
     position: absolute;
-    top: 2.8rem;
+    bottom: .85rem;
     left: .85rem;
     font-size: 1.1rem;
     color: var(--black);
@@ -2142,7 +2158,7 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
 .txt-msg>p{
     max-width: 75%;
     padding: 1rem 1rem;
-    font-size: .8rem;
+    font-size: .75rem;
     border-radius: 2rem;
     margin: unset;
     margin-bottom: .3rem;
@@ -2733,4 +2749,58 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
 .form-start-rate>div{
     display: grid;
     place-items: center;
+}
+
+.icon.img{
+    overflow: hidden;
+    position: relative;
+}
+.icon.img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.v-page>.top .fixed[left], .v-page>.top .fixed[right]{
+    top: 1.5rem;
+    transform: unset;
+}
+.iconText{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconText>span:first-child{
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    color: black;
+    margin-right: .9rem;
+
+}
+.iconText.right>span:last-child{
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    color: black;
+    margin-left: .3rem;
+
+}
+.iconText{
+    color: var(--black);
+}
+.tableFlexDisplay{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}.tableFlexDisplay{
+    width: 100%;
+    padding: .2rem .4rem;
+}
+.tableFlexDisplay>span:first-child{
+    flex-shrink: 0;
+    width: 30%;
+    font-weight: 600;
 }

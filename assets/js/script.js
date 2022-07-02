@@ -178,6 +178,7 @@ $(document).ready(function(){
             slidesPerView: "auto",
             autoHeight:true,
             observer:true,
+            focusableElements:'video',
             freeMode: true,
             scrollbar: {
               el: ".swiper-scrollbar",
