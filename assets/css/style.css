@@ -416,6 +416,10 @@ a{
     color: #fff !important;
 }
 
+.bg-light-grey{
+    background-color: rgba(218, 215, 215, 0.275);
+}
+
 .btn-border-ok{
     border: 2 solid !important;
     border-color: var(--ok) !important;
@@ -443,10 +447,18 @@ a{
     color: var(--blue2);
 }
 
-
-.bg-light-grey{
-    background-color: rgba(218, 215, 215, 0.275);
+.style-border-top{
+    border-top: 1px solid !important;
 }
+.style-border-bottom{
+    border-bottom: 1px solid !important;
+}
+.style-border-bottom,.style-border-top{
+    border-image: linear-gradient(to right, transparent, var(--grey2), transparent) 1;
+}
+
+
+
 .scroll-y{
     overflow-y: scroll;
     overflow-x: hidden;
@@ -1606,6 +1618,31 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     color: var(--blue2);
 }
 
+.sub-category-list.settings{
+    margin-top: 1.9rem;
+}
+.sub-category-list.settings:first-child{
+    margin-top: 0;
+}
+.sub-category-list.settings>ul>li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .85rem;
+    color: var(--black);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.sub-category-list.settings>ul>li>label:first-child{
+    padding: .9rem .3rem;
+    width: 100%;
+}
+.sub-category-list.settings>ul>li>label:last-child{
+    flex-shrink: 0;
+}
+
+
+
 .filter-keys{
     width: 100%;
 }
@@ -2147,15 +2184,7 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     color: rgba(91, 91, 91, 0.264); 
 }
 
-.style-border-top{
-    border-top: 1px solid !important;
-}
-.style-border-bottom{
-    border-bottom: 1px solid !important;
-}
-.style-border-bottom,.style-border-top{
-    border-image: linear-gradient(to right, transparent, var(--grey2), transparent) 1;
-}
+
 .txt-msg{
     display: flex;
     flex-direction: column;
