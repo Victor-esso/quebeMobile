@@ -400,6 +400,9 @@ a{
     background-color: var(--blue1) !important;
     color: white !important;
 }
+.bg-light-blue{
+    background-color: var(--light-blue) !important;
+}
 .bg-ok{
     background-color: var(--ok) !important;
     color: #fff !important;
@@ -1432,9 +1435,10 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     font-weight: 600;
 }
 .gigs-slide .swiper-slide .details span.price-range{
-    color: var(--dark-grey);
+    color: var(--ok);
     font-size: .6rem;
     margin: unset;
+    font-weight: 600;
 }
 .gigs-slide .swiper-slide .details div.star-rate{
     color: var(--pend);
@@ -1690,9 +1694,9 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     margin: unset;
 }
 .gigs-slide-vertical .swiper-slide .details span.price-range {
-    color: var(--black);
+    color: var(--ok);
     font-size: .7rem;
-    font-weight: 600;
+    font-weight: 600 !important;
     margin: unset;
 }
 
@@ -1812,7 +1816,9 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
 }
 .cont-title.center,.cont-txt-light.center,.cont-txt-bold.center{
     text-align: center;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .star-rate-it{
