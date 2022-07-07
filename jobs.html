@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--Gilroy Font -->
+    <link rel="stylesheet" href="assets/fonts/gilroy-css/stylesheet.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- swiper Js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Boostrap 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- JQuery Ui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AnimateCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Custome Select Box -->
+    <link rel="stylesheet" href="assets/custom-select/css/style.css">
+
+
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body v-fixedHeight>
+    <div id="v-app">
+
+        <div class="v-page d-flex flex-column ">
+            <!-- Top -->
+            <div class="top grid-center d-flex px-4 py-2">
+                <button class="trigger-history-back btn-top" left><span class="iconify" data-icon="feather:arrow-left"></span></button>
+                <h2 class="page-title-top" middle>Jobs</h2>
+                
+                <!-- Add active to the class below to activate selection buttons -->
+                <div right class="selection-btns-cont">
+                    <button class=" btn-top"><span class="iconify" data-icon="feather:plus-circle"></span></button>
+                    <div class="width-fit-content selection-btns">
+                        <button class=" btn-top"><span class="iconify" data-icon="feather:slash"></span></button>
+                        
+                        <button class=" btn-top"><span class="iconify" data-icon="feather:trash-2"></span></button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Body -->
+            <div class="body scroll-y">
+                <div class="swiper v-slick-page width-100 height-100" id="activeRequest">
+                    <div class="swiper-wrapper min-height-100">
+                        
+                        <div class="swiper-slide min-height-100 px-1 py-1 ">
+
+                            <!-- Add active to the class below to activate selection items -->
+                            <div class="selection-item-holder">
+
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job1">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job1">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-bad">Closed</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">None</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job2">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job2">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job3">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job3">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job4">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job4">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job5">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job5">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job6">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job6">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job7">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job7">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job8">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job8">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job10">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job10">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job11">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job11">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job12">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job12">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job13">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job13">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job14">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job14">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Single Job Holder -->
+                                <div class="single-job-holder selection-item style-border-bottom">
+                                    <a href="#" class="d-block">
+                                        <!-- Top -->
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-size-3 fw-700 tc-black">Web Applications Developer</span>
+                                            <span class="font-size-2 tc-ok">Open</span>
+                                        </div>
+                                        <!-- Bottom -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="font-size-2 fw-600 tc-black">
+                                                <span class="d-block">Abuja</span>
+                                                <span class="d-block">$100K</span>
+                                            </div>
+                                            <span class="font-size-2 tc-grey">View Applicants (12)</span>
+                                        </div>
+                                    </a>
+                                    <!-- Selection Box -->
+                                    <div class="selection-box">
+                                        <label for="job15">
+                                            <!-- Check it -->
+                                            <label class="check-it">
+                                                <input type="checkbox" id="job15">
+                                                <span class="check-icon"></span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                </div>
+                
+                
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <!-- FullScreen button -->
+    <button id="fullscreen-toggle" class=""><span><span class="iconify" data-icon="material-symbols:fullscreen-rounded"></span></span><span active><span class="iconify" data-icon="material-symbols:fullscreen-exit-rounded"></span></span></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    <!-- SwiperJs Javascript -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- JQuery UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- TapHold -->
+    <script src="assets/js/taphold.js"></script>
+
+    <!-- BodyMoving Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>
+
+    <!-- Lotti Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Custome Select Box -->
+    <script src="assets/custom-select/js/custom-selectbox.js"></script>
+
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/app_functions.js"></script>
+
+
+
+
+
+    <!-- Main Javascript -->
+    <script src="assets/js/script.js"></script>    
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--Gilroy Font -->
+    <link rel="stylesheet" href="assets/fonts/gilroy-css/stylesheet.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- swiper Js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Boostrap 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- JQuery Ui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AnimateCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Custome Select Box -->
+    <link rel="stylesheet" href="assets/custom-select/css/style.css">
+
+
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body v-fixedHeight>
+    <div id="v-app">
+
+        <div class="v-page d-flex flex-column ">
+            <!-- Top -->
+            <div class="top grid-center d-flex px-4 py-2">
+                <button class="trigger-history-back btn-top" left><span class="iconify" data-icon="feather:arrow-left"></span></button>
+                <h2 class="page-title-top" middle>Manage Request</h2>
+                <button class=" btn-top v-link-page" vref="postRequest" right><span class="iconify" data-icon="feather:plus-circle"></span></button>
+            </div>
+
+            <!-- Body -->
+            <div class="body scroll-y msg-container">
+                <!-- Msg Top -->
+                <div class="top tab-content-maker">
+                    <button class="tab-btns " for="activeRequest">Active</button>
+                    <button class="tab-btns active" for="pendingRequest">Pending</button>
+                    <button class="tab-btns " for="canceledRequest">Canceled</button>
+                </div>
+
+                <div class="msg-contents scroll-y width-100 height-100">
+
+                        <!-- All Request -->
+                        <div class="swiper v-slick-page width-100 height-100" id="activeRequest">
+                            <div class="swiper-wrapper min-height-100">
+                                
+                                <div class="swiper-slide min-height-100 p-4 ">
+
+                                    <!-- No Active Reqest -->
+                                    <div class=" fit-parent grid-center">
+                                        <div class="width-100">
+                                            <div icon class="width-fit-content mx-auto" style="margin: -72.5px 0 -20px 0;"><lottie-player src="assets/json/14306-empty-state-illustration.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"    autoplay loop></lottie-player></div>
+                                            <p class="text-center font-size-3 fw-700 tc-black mb-1">No Active Request Found</p>
+                                            <p class="text-center mx-auto tc-grey font-size-2" style="width: 60%;">Click the <span class="iconify" data-icon="feather:plus-circle" style="font-size:1.2rem; color:#00afef; margin:0 .2rem;"></span> sign at the top right to post a request</p>
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                        </div>
+
+                        <!-- Pending Request -->
+                        <div class="swiper v-slick-page width-100 height-100" id="pendingRequest">
+                            <div class="swiper-wrapper min-height-100">
+                                
+                                <div class="swiper-slide min-height-100 p-0">
+
+                                    <!-- Single Request Holder -->
+                                    <div class="swiper v-row-swiper single-msg-holder single-order-holder  single-request-holder" swiper-props='{"freeMode":false,"threshold":5,"followFinger":false,"initialSlide":1}'>
+                                        <div class="swiper-wrapper">
+                                            <!-- Left Button -->
+                                            <div class="swiper-slide right order-side">
+                                                <button class="bg-blue">
+                                                    <div>
+                                                        <div><span class="iconify" data-icon="feather:edit"></span></div>
+                                                        <span>Edit</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+
+                                            <!-- Main View -->
+                                            <div class="swiper-slide main request-front-design">
+                                                <a href="#">
+                                                    <h1 class="txt-line-1">I Want a Portfolio Website</h1>
+                                                    <p class=" txt-line-3 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus aut pariatur commodi architecto neque quaerat quod eos tempora provident voluptas molestiae distinctio suscipit, temporibus doloremque! Nobis facere eius voluptatibus.</p>
+                                                    <div class="request-bottom">
+                                                        <span>$160</span>
+                                                        <span>
+                                                            <span icon><span class="iconify" data-icon="feather:eye"></span></span>
+                                                            12k Offers
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <!-- Right Button -->
+                                            <div class="swiper-slide right order-side msg-side">
+                                                <button class="red">
+                                                    <div>
+                                                        <div><span class="iconify" data-icon="feather:trash"></span></div>
+                                                        <span>Delete</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Request Holder -->
+                                    <div class="swiper v-row-swiper single-msg-holder single-order-holder  single-request-holder" swiper-props='{"freeMode":false,"threshold":5,"followFinger":false,"initialSlide":1}'>
+                                        <div class="swiper-wrapper">
+                                            <!-- Left Button -->
+                                            <div class="swiper-slide right order-side">
+                                                <button class="bg-blue">
+                                                    <div>
+                                                        <div><span class="iconify" data-icon="feather:edit"></span></div>
+                                                        <span>Edit</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+
+                                            <!-- Main View -->
+                                            <div class="swiper-slide main request-front-design">
+                                                <a href="#">
+                                                    <h1 class="txt-line-1">I Want a Portfolio Website</h1>
+                                                    <p class=" txt-line-3 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus aut pariatur commodi architecto neque quaerat quod eos tempora provident voluptas molestiae distinctio suscipit, temporibus doloremque! Nobis facere eius voluptatibus.</p>
+                                                    <div class="request-bottom">
+                                                        <span>$160</span>
+                                                        <span>
+                                                            <span icon><span class="iconify" data-icon="feather:eye"></span></span>
+                                                            12k Offers
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <!-- Right Button -->
+                                            <div class="swiper-slide right order-side msg-side">
+                                                <button class="red">
+                                                    <div>
+                                                        <div><span class="iconify" data-icon="feather:trash"></span></div>
+                                                        <span>Delete</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Request Holder -->
+                                    <div class="swiper v-row-swiper single-msg-holder single-order-holder  single-request-holder" swiper-props='{"freeMode":false,"threshold":5,"followFinger":false,"initialSlide":1}'>
+                                        <div class="swiper-wrapper">
+                                            <!-- Left Button -->
+                                            <div class="swiper-slide right order-side">
+                                                <button class="bg-blue">
+                                                    <div>
+                                                        <div><span class="iconify" data-icon="feather:edit"></span></div>
+                                                        <span>Edit</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+
+                                            <!-- Main View -->
+                                            <div class="swiper-slide main request-front-design">
+                                                <a href="#">
+                                                    <h1 class="txt-line-1">I Want a Portfolio Website</h1>
+                                                    <p class=" txt-line-3 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus aut pariatur commodi architecto neque quaerat quod eos tempora provident voluptas molestiae distinctio suscipit, temporibus doloremque! Nobis facere eius voluptatibus.</p>
+                                                    <div class="request-bottom">
+                                                        <span>$160</span>
+                                                        <span>
+                                                            <span icon><span class="iconify" data-icon="feather:eye"></span></span>
+                                                            12k Offers
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <!-- Right Button -->
+                                            <div class="swiper-slide right order-side msg-side">
+                                                <button class="red">
+                                                    <div>
+                                                        <div><span class="iconify" data-icon="feather:trash"></span></div>
+                                                        <span>Delete</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                
+                                    
+
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                        </div>
+
+                        <div class="swiper v-slick-page width-100 height-100" id="canceledRequest">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide height-auto p-0">
+
+                                    <div class="body" style="background-color: yellow;"></div>
+                                
+                                    
+
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                        </div>
+
+                </div>
+                
+                
+            </div>
+
+        </div>
+
+
+
+        <!-- Post Request Page -->
+        <div class="v-page vPages buyer-search-filter trigger-back" vpage-name="postRequest">
+
+            <div class="inner">
+                <div class="main">
+
+                    <div class="swiper v-slick-page width-100 height-100">
+                        <div class="swiper-wrapper">
+                            <!-- Body Inner -->
+                            <div class="swiper-slide height-auto" style="padding:1rem 2.5rem ;">
+                                <!-- PAGE TITLE -->
+                                <h1 class="title">Post a Request</h1>
+
+                                <form action="">
+
+                                    <div class="v-form-input">
+                                        <label for="requestTitle">Title</label>
+                                        <input type="text" placeholder="Enter A title" id="requestTitle">                                       
+                                    </div>
+
+                                    <div class="v-form-select m-0">
+                                        <label for="location">Description</label>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="v-form-input m-0">
+                                                <textarea class=" font-size-2" placeholder="Describe what you want ..."></textarea>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <div class="v-form-select">
+                                        <label for="categories">categories</label>
+                                        <select name="categories" id="categories" class="custom-select" icon='<span class="iconify" data-icon="feather:code"></span>'>
+                                            <option value="develoment">Development</option>
+                                            <option value="Digital Marketing">Digital Marketing</option>
+                                            <option value="Writing">Writing</option>
+                                            <option value="Video">Video</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="v-form-select">
+                                        <label for="sub_categories">Sub Category</label>
+                                        <select name="sub_categories" id="sub_categories" class="custom-select" icon='<span class="iconify" data-icon="feather:code"></span>'>
+                                            <option value="develoment">Front-End Development</option>
+                                            <option value="Digital Marketing">Digital Marketing</option>
+                                            <option value="Writing">Writing</option>
+                                            <option value="Video">Video</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="v-form-select m-0">
+                                        <label for="location">Orders</label>
+                                        <div class="container-in-form font-size-2">
+                                            <div >
+                                                <div>Delivery Time</div>
+                                                <div class="d-flex" ><span>Days</span><input type="text" style="width:40px;border-radius: .2rem;margin-left:.3rem; padding-left:.2rem;"></div>
+                                            </div>
+                                            <div >
+                                                <div>Budget (Optional)</div>
+                                                <div class="d-flex" ><span>$</span><input type="text" style="width:40px;border-radius: .2rem;margin-left:.3rem; padding-left:.2rem;" placeholder="Min $50"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <button class="v-submit-btn-default">Show Results</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- FullScreen button -->
+    <button id="fullscreen-toggle" class=""><span><span class="iconify" data-icon="material-symbols:fullscreen-rounded"></span></span><span active><span class="iconify" data-icon="material-symbols:fullscreen-exit-rounded"></span></span></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        setTimeout(() => {
+                    //window.location.reload();
+            }, 4000);
+    </script>   
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    <!-- SwiperJs Javascript -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- JQuery UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- BodyMoving Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>
+
+    <!-- Lotti Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Custome Select Box -->
+    <script src="assets/custom-select/js/custom-selectbox.js"></script>
+
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/app_functions.js"></script>
+
+
+
+
+
+    <!-- Main Javascript -->
+    <script src="assets/js/script.js"></script>    
+</body>
+</html>

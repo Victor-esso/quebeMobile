@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--Gilroy Font -->
+    <link rel="stylesheet" href="assets/fonts/gilroy-css/stylesheet.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- swiper Js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Boostrap 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- JQuery Ui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AnimateCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Custome Select Box -->
+    <link rel="stylesheet" href="assets/custom-select/css/style.css">
+
+
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body v-fixedHeight>
+    <div id="v-app">
+
+        <div class="v-page d-flex flex-column ">
+            <!-- Top -->
+            <div class="top grid-center d-flex px-4 py-2">
+                <button class="trigger-history-back btn-top" left><span class="iconify" data-icon="feather:arrow-left"></span></button>
+                <h2 class="page-title-top" middle>Requests</h2>
+                
+            </div>
+
+            <!-- Body -->
+            <div class="body scroll-y">
+                <div class="swiper v-slick-page width-100 height-100" id="activeRequest">
+                    <div class="swiper-wrapper min-height-100">
+                        
+                        <div class="swiper-slide min-height-100 px-4 py-1 ">
+
+                            <div class="request-front-design  px-0 py-3">
+
+                                <a href="#" class="d-block">
+                                    <!-- Top Profile Picure Section -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div class="width-fit-content d-flex justify-content-start align-items-center">
+                                            <div class="height-equal-width bg-bad radius-50p overflow-hidden" style="width:40px ;"><img src="https://cdn.dribbble.com/users/916023/screenshots/14873242/media/a379bc040ab7f090580ed39c6e13c551.png?compress=1&resize=400x300" alt="" class="img-fit-parent"></div>
+                                            <span class="tc-black font-size-3x5 fw-700 ms-2">Peter Griffin</span>
+                                        </div>
+                                        <span class="tc-grey font-size-2">17 Apr</span>
+                                    </div>
+                                    <h1 class="txt-line-1 font-size-2x5">I Want a Portfolio Website</h1>
+                                    <p class=" txt-line-3 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus aut pariatur commodi architecto neque quaerat quod eos tempora provident voluptas molestiae distinctio suscipit, temporibus doloremque! Nobis facere eius voluptatibus.</p>
+                                </a>
+
+                                <!-- Send Offer -->
+                                <div class="grid-center">
+                                    <span class="info-state-ok">Offer Sent</span>
+                                </div>
+                            </div>
+
+                            <div class="request-front-design  px-0 py-3">
+
+                                <a href="#" class="d-block">
+                                    <!-- Top Profile Picure Section -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div class="width-fit-content d-flex justify-content-start align-items-center">
+                                            <div class="height-equal-width bg-bad radius-50p overflow-hidden" style="width:40px ;"><img src="https://cdn.dribbble.com/users/916023/screenshots/14873242/media/a379bc040ab7f090580ed39c6e13c551.png?compress=1&resize=400x300" alt="" class="img-fit-parent"></div>
+                                            <span class="tc-black font-size-3x5 fw-700 ms-2">Peter Griffin</span>
+                                        </div>
+                                        <span class="tc-grey font-size-2">11 Apr</span>
+                                    </div>
+                                    <h1 class="txt-line-1 font-size-2x5">I Want a Portfolio Website</h1>
+                                    <p class=" txt-line-3 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus aut pariatur commodi architecto neque quaerat quod eos tempora provident voluptas molestiae distinctio suscipit, temporibus doloremque! Nobis facere eius voluptatibus.</p>
+                                </a>
+
+                                <!-- Send Offer -->
+                                <div class="grid-center">
+                                    <button class="v-submit-btn-default mx-auto width-100 py-2 font-size-2x5 v-link-page" vref="CreateCustomOffer">Send Offer</button>
+                                </div>
+                            </div>
+                            
+                            <div class="request-front-design  px-0 py-3">
+
+                                <a href="#" class="d-block">
+                                    <!-- Top Profile Picure Section -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div class="width-fit-content d-flex justify-content-start align-items-center">
+                                            <div class="height-equal-width bg-bad radius-50p overflow-hidden" style="width:40px ;"><img src="https://cdn.dribbble.com/users/916023/screenshots/14873242/media/a379bc040ab7f090580ed39c6e13c551.png?compress=1&resize=400x300" alt="" class="img-fit-parent"></div>
+                                            <span class="tc-black font-size-3x5 fw-700 ms-2">Peter Griffin</span>
+                                        </div>
+                                        <span class="tc-grey font-size-2">03 Apr</span>
+                                    </div>
+                                    <h1 class="txt-line-1 font-size-2x5">I Want a Portfolio Website</h1>
+                                    <p class=" txt-line-3 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus aut pariatur commodi architecto neque quaerat quod eos tempora provident voluptas molestiae distinctio suscipit, temporibus doloremque! Nobis facere eius voluptatibus.</p>
+                                </a>
+
+                                <!-- Send Offer -->
+                                <div class="grid-center">
+                                    <button class="v-submit-btn-default mx-auto width-100 py-2 font-size-2x5 v-link-page" vref="CreateCustomOffer">Send Offer</button>
+                                </div>
+                            </div>
+                            
+                            <div class="request-front-design  px-0 py-3">
+
+                                <a href="#" class="d-block">
+                                    <!-- Top Profile Picure Section -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div class="width-fit-content d-flex justify-content-start align-items-center">
+                                            <div class="height-equal-width bg-bad radius-50p overflow-hidden" style="width:40px ;"><img src="https://cdn.dribbble.com/users/916023/screenshots/14873242/media/a379bc040ab7f090580ed39c6e13c551.png?compress=1&resize=400x300" alt="" class="img-fit-parent"></div>
+                                            <span class="tc-black font-size-3x5 fw-700 ms-2">Peter Griffin</span>
+                                        </div>
+                                        <span class="tc-grey font-size-2">25 Mar</span>
+                                    </div>
+                                    <h1 class="txt-line-1 font-size-2x5">I Want a Portfolio Website</h1>
+                                    <p class=" txt-line-3 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus aut pariatur commodi architecto neque quaerat quod eos tempora provident voluptas molestiae distinctio suscipit, temporibus doloremque! Nobis facere eius voluptatibus.</p>
+                                </a>
+
+                                <!-- Send Offer -->
+                                <div class="grid-center">
+                                    <button class="v-submit-btn-default mx-auto width-100 py-2 font-size-2x5 v-link-page" vref="CreateCustomOffer">Send Offer</button>
+                                </div>
+                            </div>
+
+                            <div class="request-front-design  px-0 py-3">
+
+                                <a href="#" class="d-block">
+                                    <!-- Top Profile Picure Section -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div class="width-fit-content d-flex justify-content-start align-items-center">
+                                            <div class="height-equal-width bg-bad radius-50p overflow-hidden" style="width:40px ;"><img src="https://cdn.dribbble.com/users/916023/screenshots/14873242/media/a379bc040ab7f090580ed39c6e13c551.png?compress=1&resize=400x300" alt="" class="img-fit-parent"></div>
+                                            <span class="tc-black font-size-3x5 fw-700 ms-2">Peter Griffin</span>
+                                        </div>
+                                        <span class="tc-grey font-size-2">19 Mar</span>
+                                    </div>
+                                    <h1 class="txt-line-1 font-size-2x5">I Want a Portfolio Website</h1>
+                                    <p class=" txt-line-3 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus aut pariatur commodi architecto neque quaerat quod eos tempora provident voluptas molestiae distinctio suscipit, temporibus doloremque! Nobis facere eius voluptatibus.</p>
+                                </a>
+
+                                <!-- Send Offer -->
+                                <div class="grid-center">
+                                    <button class="v-submit-btn-default mx-auto width-100 py-2 font-size-2x5 v-link-page" vref="CreateCustomOffer">Send Offer</button>
+                                </div>
+                            </div>
+
+                            <div class="request-front-design  px-0 py-3">
+
+                                <a href="#" class="d-block">
+                                    <!-- Top Profile Picure Section -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div class="width-fit-content d-flex justify-content-start align-items-center">
+                                            <div class="height-equal-width bg-bad radius-50p overflow-hidden" style="width:40px ;"><img src="https://cdn.dribbble.com/users/916023/screenshots/14873242/media/a379bc040ab7f090580ed39c6e13c551.png?compress=1&resize=400x300" alt="" class="img-fit-parent"></div>
+                                            <span class="tc-black font-size-3x5 fw-700 ms-2">Peter Griffin</span>
+                                        </div>
+                                        <span class="tc-grey font-size-2">18 Mar</span>
+                                    </div>
+                                    <h1 class="txt-line-1 font-size-2x5">I Want a Portfolio Website</h1>
+                                    <p class=" txt-line-3 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus aut pariatur commodi architecto neque quaerat quod eos tempora provident voluptas molestiae distinctio suscipit, temporibus doloremque! Nobis facere eius voluptatibus.</p>
+                                </a>
+
+                                <!-- Send Offer -->
+                                <div class="grid-center">
+                                    <button class="v-submit-btn-default mx-auto width-100 py-2 font-size-2x5 v-link-page" vref="CreateCustomOffer">Send Offer</button>
+                                </div>
+                            </div>
+
+                            <div class="request-front-design  px-0 py-3">
+
+                                <a href="#" class="d-block">
+                                    <!-- Top Profile Picure Section -->
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <div class="width-fit-content d-flex justify-content-start align-items-center">
+                                            <div class="height-equal-width bg-bad radius-50p overflow-hidden" style="width:40px ;"><img src="https://cdn.dribbble.com/users/916023/screenshots/14873242/media/a379bc040ab7f090580ed39c6e13c551.png?compress=1&resize=400x300" alt="" class="img-fit-parent"></div>
+                                            <span class="tc-black font-size-3x5 fw-700 ms-2">Peter Griffin</span>
+                                        </div>
+                                        <span class="tc-grey font-size-2">01 Mar</span>
+                                    </div>
+                                    <h1 class="txt-line-1 font-size-2x5">I Want a Portfolio Website</h1>
+                                    <p class=" txt-line-3 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel minus aut pariatur commodi architecto neque quaerat quod eos tempora provident voluptas molestiae distinctio suscipit, temporibus doloremque! Nobis facere eius voluptatibus.</p>
+                                </a>
+
+                                <!-- Send Offer -->
+                                <div class="grid-center">
+                                    <button class="v-submit-btn-default mx-auto width-100 py-2 font-size-2x5 v-link-page" vref="CreateCustomOffer">Send Offer</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                </div>
+                
+                
+            </div>
+
+        </div>
+
+
+
+        
+        <!-- Create Custom Offer Container-->
+        <div class="v-page vPages buyer-search-filter trigger-back" vpage-name="CreateCustomOffer">
+
+            <div class="inner">
+                <div class="main">
+
+                    <div class="swiper v-slick-page width-100 height-100" >
+                        <div class="swiper-wrapper">
+                            <!-- Body Inner -->
+                            <div class="swiper-slide height-auto" style="padding:1rem 2.5rem ;">
+                                <!-- PAGE TITLE -->
+                                <h1 class="title">Create Custom Offer</h1>
+
+                                <form action="">
+                                    
+                                    <div class="v-form-select m-0">
+                                        <label for="location">Title</label>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="v-form-input">
+                                                <textarea class=" font-size-2"></textarea>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <div class="v-form-select m-0">
+                                        <label for="location">Extra(3)</label>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="v-form-input">
+                                                <textarea class=" font-size-2" placeholder="Add text seperated by comma"></textarea>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <div class="v-form-select">
+                                        <label for="location">Conditions</label>
+                                        <div class="container-in-form font-size-2">
+                                            <div >
+                                                <div>Number of Revisions</div>
+                                                <div class="d-flex" ><input type="text" style="width:40px;border-radius: .2rem; padding-left:.2rem;"></div>
+                                            </div>
+                                            <div >
+                                                <div>Delivery Time</div>
+                                                <div class="d-flex" ><span>Days</span><input type="text" style="width:40px;border-radius: .2rem;margin-left:.3rem; padding-left:.2rem;"></div>
+                                            </div>
+                                            <div >
+                                                <div>Amount</div>
+                                                <div class="d-flex" ><span>$</span><input type="text" style="width:40px;border-radius: .2rem;margin-left:.3rem; padding-left:.2rem;"></div>
+                                            </div>
+                                            <div >
+                                                <div>Request Requirement</div>
+                                                <div class="d-flex" >
+                                                    <!-- Rounded switch -->
+                                                    <label class="switch blue">
+                                                        <input type="checkbox">
+                                                        <span class="slider round"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="v-form-select m-0">
+                                        <label for="location">Add A Description To Your Offer</label>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="v-form-input">
+                                                <textarea class=" font-size-2"></textarea>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                    </div>
+                </div>
+
+                <div class="bottom" >
+                    <div class=" width-100" style="padding: 0 2.5rem;">
+                        <div class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100">Send Offer</button></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FullScreen button -->
+    <button id="fullscreen-toggle" class=""><span><span class="iconify" data-icon="material-symbols:fullscreen-rounded"></span></span><span active><span class="iconify" data-icon="material-symbols:fullscreen-exit-rounded"></span></span></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    <!-- SwiperJs Javascript -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- JQuery UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- BodyMoving Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>
+
+    <!-- Lotti Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Custome Select Box -->
+    <script src="assets/custom-select/js/custom-selectbox.js"></script>
+
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/app_functions.js"></script>
+
+
+
+
+
+    <!-- Main Javascript -->
+    <script src="assets/js/script.js"></script>    
+</body>
+</html>

@@ -9,6 +9,21 @@ $(document).ready(function(){
         $(this).css('height',$(this).css('width'));
     })
     
+    $('[height-percentage-width]').each(function(){
+
+        let w = numberOnly($(this).css('width'))*1;
+        console.log(w);
+        let percent = numberOnly($(this).attr('height-percentage-width'));
+        
+        if(percent.trim() != '' && percent != 0 && percent >0){
+            let newWidth = ((percent / 100) * w);
+            
+            $(this).css('height',newWidth + 'px');
+        }
+        
+
+    });
+    
     // Update the height of the page
     const updatePageHeight = () =>{
 
@@ -472,9 +487,49 @@ $('[swiper-update-ontouch]').each(function(){
 
 
 
+$('.selection-item-holder').each(function(){
+    $(this).on('taphold',function(e){
+        
+        let selectionItemHolder = $(this);
+        let selectionBtnHolder = $('.selection-btns-cont');
+        if(!$(this).hasClass('active')){
+           // Vibrate the phone
+            navigator.vibrate(50);
+            selectionItemHolder.addClass('active');
+            selectionBtnHolder.addClass('active');
+            activeHoldElement = e.target.closest('.selection-item');
+            activeHoldCheckInput = activeHoldElement.querySelector('.selection-box input[type="checkbox"]');
+            activeHoldCheckInput.checked = true;
+       }
+    })
+})
 
+$('.selection-item-holder').each(function(){
+    
+    let selectionItemHolder = $(this);
+    let selectionBtnHolder = $('.selection-btns-cont');
+    checkInput = $(this).find('.selection-box input[type="checkbox"]');
+        //Checks if anyInput is checked
+        const anyCheckedInput = (checkInput) => {
+            counter = 0;
+            checkInput.each(function(){
+                if($(this).prop('checked')){
+                    counter++;
+                }
+            })
+            return counter;
+        }
 
-
+        checkInput.each(function(){
+            $(this).change(function(){
+                if(!anyCheckedInput($('.selection-box input[type="checkbox"]'))){
+                    selectionItemHolder.removeClass('active');
+                    selectionBtnHolder.removeClass('active');
+                    navigator.vibrate(50);
+                }
+            })
+        })
+})
 
 
 

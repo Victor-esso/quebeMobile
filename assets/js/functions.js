@@ -254,7 +254,7 @@ function replace_last_occurrence(character,replacement,string){
             zero = '';
         }
         for(var cnt=0;cnt<arr.length;cnt++){
-            if(isNaN(arr[cnt])==false || arr[cnt] == '0'){
+            if(isNaN(arr[cnt])==false || arr[cnt] == '0' || arr[cnt] == '.'){
                 out.push(arr[cnt]);
             }
         }
