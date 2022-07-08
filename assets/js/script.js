@@ -461,6 +461,13 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     }
     
   });
+
+  if(accordionItemHeader.parentElement.classList.contains("active")){
+    accordionItemHeader.nextElementSibling.style.maxHeight = accordionItemHeader.nextElementSibling.scrollHeight + "px";
+    accordionItemHeader.classList.add("active");
+  }
+
+
 });
 
 
@@ -479,6 +486,14 @@ $('[swiper-update-ontouch]').each(function(){
     //         swiper.update();
     //     },400);
     // });
+})
+$('[swiper-re-init]').each(function(){
+    
+        swiperInit = $(this)[0].swiper;
+        swiperInit.update();
+        setTimeout(function(){
+            swiperInit.update();
+        },200);
 })
 
 

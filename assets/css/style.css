@@ -170,12 +170,14 @@ input{
     width: max-content;
 }
 
-
 .radius-5{
     border-radius: 5px;
 }
 .radius-1{
     border-radius: 1px;
+}
+.radius-0{
+    border-radius: 0px !important;
 }
 .radius-2{
     border-radius: 2px;
@@ -1578,6 +1580,7 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
 }
 .like-btn>span{
     color: rgba(140, 140, 140, 0.281);
+    display: grid !important;
 }
 
 .like-btn.active>span[active]{
@@ -2566,7 +2569,9 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     content: url('https://api.iconify.design/feather/chevron-down.svg?color=%2300afef');
     transform: rotate(-180deg);
 }
-
+.accordion-item.active .accordion-item-body{
+    overflow: visible !important;
+}
 .order-timeline-item{
     position: relative;
     display: flex;
@@ -3032,4 +3037,49 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
 }
 .selection-item-holder.active .selection-item{
     padding-left: 3.2rem;
+}
+.single-jobs-holder .swiper-wrapper .right,.single-jobs-holder .swiper-wrapper .left{
+    height: 85px;
+    width:85px;
+}
+.chat-btn{
+    position: absolute;
+    bottom:15%;
+    right:2rem;
+}
+.chat-btn>a{
+    position: relative;
+    
+    display: grid;
+    place-items: center;
+    background-color: white;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    z-index: 87;
+    box-shadow: var(--shadow-elevation-medium);
+    
+}
+.chat-btn>a.active::after{
+    content: ' ';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--ok);
+    z-index: 88;
+    top: .5rem;
+    right:0;
+}
+
+.chat-btn>a>span div{
+    font-size: .7rem;
+    color: var(--black);
+}
+.chat-btn>a>span{
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.chat-btn>span>span{
+    display: grid;
 }

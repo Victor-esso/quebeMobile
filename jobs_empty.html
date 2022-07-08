@@ -23,6 +23,13 @@
     <!-- JQuery Ui -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- AnimateCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Custome Select Box -->
+    <link rel="stylesheet" href="assets/custom-select/css/style.css">
+
+
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -30,70 +37,52 @@
 <body v-fixedHeight>
     <div id="v-app">
 
-        <div class="v-page registerUser d-flex flex-column ">
-
-            <div class="top">
-                <a class="btn-top" right href="#"><span class="iconify" data-icon="feather:x"></span></a>
-            </div>
-
-            <div class="body scroll-y">
-                <div>
-                    <h1 class="text-center fw-bold">Welcome back!</h1>
-                    <h2 class="text-center">Sign in to access your account</h2>
-
-                    <!-- Register Form -->
-                    <form action="" class="demoSubmit" href="dashboard.html">
-                    
-                        <div class="v-form-input">
-                            <input type="text" placeholder="Email">
-                            <div class="error-msg">username already exist</div>
-                        </div>
-                        <div class="v-form-input">
-                            <input type="text" placeholder="Password">
-                            <div class="error-msg">username already exist</div>
-                        </div>
-
+        <div class="v-page d-flex flex-column ">
+            <!-- Top -->
+            <div class="top grid-center d-flex px-4 py-2">
+                <button class="trigger-history-back btn-top" left><span class="iconify" data-icon="feather:arrow-left"></span></button>
+                <h2 class="page-title-top" middle>Jobs</h2>
+                
+                <!-- Add active to the class below to activate selection buttons -->
+                <div right class="selection-btns-cont">
+                    <button class=" btn-top"><span class="iconify" data-icon="feather:plus-circle"></span></button>
+                    <div class="width-fit-content selection-btns">
+                        <button class=" btn-top"><span class="iconify" data-icon="feather:slash"></span></button>
                         
-                        <div class="d-flex justify-content-between align-items-center px-2">
-                            <div class="v-form-checkbox">
-                                <input type="checkbox" name="remember" id="remember">
-                                <label for="remember">
-                                    <div><span class="iconify" data-icon="bi:check"></span></div>
-                                    <span>Remember me</span>
-                                </label>
-                            </div>
-
-                            <a href="forgot_password.html" class="tc-blue-2 fw-bold" style="font-size:.8rem;" >Forgot Password</a>
-                        </div>
-
-                        <div class="v-form-submit">
-                            <input type="submit" value="Sign-in">
-                        </div>
-                    </form>
-
-                    <!-- Or -->
-                    <div class="or-divider">
-                        <span>or continue with</span>
-                    </div>
-
-                    <!-- Sign in Options -->
-                    <div class=" sign-in-options d-flex justify-content-around align-items-center ">
-                        <button><span class="iconify" data-icon="flat-color-icons:google"></span></button>
-                        <button><span class="iconify" data-icon="logos:linkedin-icon"></span></button>
-                        <button><span class="iconify" data-icon="logos:facebook"></span></button>
+                        <button class=" btn-top"><span class="iconify" data-icon="feather:trash-2"></span></button>
                     </div>
                 </div>
+                
             </div>
 
-            <div class="bottom">
-                <p class="abs-center termsCondition">By signing up, you agree to our <a href="#">Terms of Service</a></p>
+            <!-- Body -->
+            <div class="body scroll-y">
+                <div class="swiper v-slick-page width-100 height-100" id="activeRequest">
+                    <div class="swiper-wrapper min-height-100">
+                        
+                        <div class="swiper-slide min-height-100 px-1 py-1 grid-center ">
+                            
+                            <div class=" fit-parent grid-center">
+                                <div class="width-100">
+                                    <div icon class="width-fit-content mx-auto" style="margin: -72.5px 0 -20px 0;"><lottie-player src="assets/json/14306-empty-state-illustration.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"    autoplay loop></lottie-player></div>
+                                    <p class="text-center font-size-3 fw-700 tc-black mb-1">No Job Added Yet</p>
+                                    <p class="text-center mx-auto tc-grey font-size-2" style="width: 60%;">Click the <span class="iconify" data-icon="feather:plus-circle" style="font-size:1.2rem; color:#00afef; margin:0 .2rem;"></span> Icon To Post A job</p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                </div>
+                
+                
             </div>
 
         </div>
 
-        <div id="v-loader">
-            
-        </div>
+
+
+
     </div>
 
 
@@ -105,6 +94,12 @@
 
 
 
+<!-- Moves to messages after 5 seconds -->
+<script>
+    setTimeout(() => {
+                window.location.href = './jobs2.html';
+        }, 4000);
+</script>
 
 
 
@@ -113,12 +108,7 @@
 
 
 
-
-
-
-
-
-
+  
 
 
 
@@ -138,14 +128,20 @@
     <!-- JQuery UI -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- TapHold -->
+    <script src="assets/js/taphold.js"></script>
+
     <!-- BodyMoving Animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>
 
     <!-- Lotti Player -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+    <!-- Custome Select Box -->
+    <script src="assets/custom-select/js/custom-selectbox.js"></script>
 
     <script src="assets/js/functions.js"></script>
+    <script src="assets/js/app_functions.js"></script>
 
 
 
