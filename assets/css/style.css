@@ -69,6 +69,9 @@
     margin: 0;
     padding: 0;
 }
+a:active{
+    color: inherit !important;
+}
 /* No ScrollBAR */
 *::-webkit-scrollbar {
     width: 0px;
