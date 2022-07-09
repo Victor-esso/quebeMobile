@@ -74,7 +74,7 @@
                                         </div>
                                         <div>
                                             <span>$8</span>
-                                            <span class="tc-ok">Completed</span>
+                                            <span class="tc-blue">In progress</span>
                                         </div>
                                     </div>
 
@@ -89,9 +89,9 @@
                                 <div>
                                     <!-- Toggle the display of each item buy using "d-none" -->
                                     <!-- Delivered Icon -->
-                                    <div class="delivered"><span class="iconify" data-icon="feather:check-circle"></span> <span>Delivered</span></div>
+                                    <div class="delivered d-none"><span class="iconify" data-icon="feather:check-circle"></span> <span>Delivered</span></div>
                                     <!-- Progress Icon -->
-                                    <div class="in-progress d-none"><span class="iconify" data-icon="feather:bell"></span><span>In progress</span></div>
+                                    <div class="in-progress d-none"><span class="iconify" data-icon="feather:bell"></span><span></span></div>
                                     <!-- Cancel Icon -->
                                     <div class="cancelled d-none"><span class="iconify" data-icon="feather:x-circle"></span><span>cancelled</span></div>
                                     <span class="date">20 Jul 2022</span>
@@ -133,14 +133,7 @@
                                         <div class="item-write">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, minima ipsa obcaecati porro repellat ipsum iure ducimus eveniet consectetur maiores atque neque excepturi nam voluptas consequuntur sequi aperiam fugit fuga.</div>
 
                                         <!-- You can remove Item Button Holder at anytime or toggle class "d-none"  -->
-                                        <div class="item-btn-holder">
-                                            <div class="width-100"><button class=" btn-border-main"> <span><span class="iconify" data-icon="feather:thumbs-up"></span></span> Accept Order</button></div>
-
-                                            <div class="width-100"><button class=" btn-border-light-blue tc-light-blue bg-unset"> <span><span class="iconify" data-icon="feather:download"></span></span> Download</button></div>
-                                        </div>
-
-                                        <!-- You can remove Item Button Holder at anytime or toggle class "d-none"  -->
-                                        <div class="item-btn-holder single d-none">
+                                        <div class="item-btn-holder single">
                                             <div class="width-100"><button class=" btn-border-main"> <span><span class="iconify" data-icon="feather:send"></span></span> Submit</button></div>
                                         </div>
 
@@ -150,12 +143,12 @@
                                 </div>
 
                                 <!-- Add "ok" or "error" "pending" to the accordion-item Class  -->
-                                <div class="accordion-item ok">
+                                <div class="accordion-item">
                                     <div class="accordion-item-header noselect">
                                         
                                         <div class="order-timeline-item">
                                             <div>
-                                                <div><span class="iconify" data-icon="feather:alert-circle" ></span></div><span>Resolution Requested</span>
+                                                <div><span class="iconify" data-icon="feather:alert-circle" ></span></div><span>Resolutions Requested</span>
                                             </div>
             
                                             <div>
@@ -165,25 +158,6 @@
                                     </div>
                                     <div class="accordion-item-body order-timeline-content">
                                         <div class="accordion-item-body-content content">
-                                            <div class="item-line">
-                                                <span>Delivery Date:</span>
-                                                <span>20 Jul 2022</span>
-                                            </div>
-    
-                                            <div class="item-line">
-                                                <span>Description</span>
-                                                <span></span>
-                                            </div>
-    
-                                            <div class="item-write">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, minima ipsa .</div>
-
-                                            <div class="item-btn-holder" error>
-                                                <div class="width-100"><button class=" btn-border-main"> <span><span class="iconify" data-icon="feather:thumbs-up"></span></span> Accept Order</button></div>
-                                                <div class="width-100"><button class=" btn-border-bad tc-bad bg-unset"> <span><span class="iconify" data-icon="feather:thumbs-down"></span></span> Reject Request</button></div>
-                                            </div>
-
-                                            <div class="accepted-msg" ok><span>Request Accepted</span></div>
-                                            <div class="pending-msg" pending><span>Pending Acceptance</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -208,7 +182,7 @@
             </div>
 
             <!-- Rate Client Button , can be removed at any time  -->
-            <div class="custom-offer-top bg-unset">
+            <div class="custom-offer-top bg-unset d-none">
                 <button class="v-link-page rate-client-btn  bg-pend" vref="starRating">
                     <span><span class="iconify" data-icon="feather:star"></span></span> Rate Client
                 </button>
@@ -257,7 +231,7 @@
 
                 <div class="bottom" >
                     <div class=" width-100" style="padding: 0 2.5rem;">
-                        <div class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100">Send Offer</button></div>
+                        <a href="order_timeline_freelancer2.html" class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100">Submit </button></a>
                     </div>
                 </div>
             </div>
@@ -265,7 +239,7 @@
         </div>
 
         <!-- Rating Container Container-->
-        <div class="v-page vPages buyer-search-filter trigger-back" vpage-name="starRating">
+        <div class="v-page vPages buyer-search-filter trigger-back d-none" vpage-name="starRating">
 
             <div class="inner">
                 <div class="main">

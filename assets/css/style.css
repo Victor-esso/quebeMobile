@@ -66,7 +66,6 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     font-family: var(--font2);
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -89,7 +88,7 @@
 
 ul,
 ol {
-    list-style: none;
+    list-style-position: inside;
 }
 
 textarea {
@@ -369,10 +368,10 @@ input{
     color: inherit !important;
 }
 .tc-black{
-    color: var(--black);
+    color: var(--black) !important;
 }
 .tc-grey{
-    color: var(--dark-grey);
+    color: var(--dark-grey) !important;
 }
 .tc-grey-2{
     color: var(--grey) !important;
@@ -384,7 +383,7 @@ input{
     color: var(--blue1) !important;
 }
 .tc-white{
-    color: white;
+    color: white !important;
 }
 .tc-ok{
     color: var(--ok) !important;
@@ -1282,6 +1281,23 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     color: var(--blue1);
     border-color: var(--blue1);
 }
+[badge],.main-nav[badge]{
+    position: relative;
+}
+[badge]::after,.main-nav[badge]::after{
+    content: attr(badge);
+    position: absolute;
+    color: white;
+    background-color: var(--bad);
+    display: grid;
+    place-items: center;
+    font-size: .8rem;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    top: 5px;
+    right: -10px;
+}
 
 .v-slick-page>.swiper-wrapper>.swiper-slide{
     height: auto;
@@ -1642,6 +1658,7 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
 .sub-category-list ul{
     padding: unset;
     margin: unset;
+    list-style: none;
 }
 .sub-category-list li{
     border-bottom: 0px solid var(--grey);
@@ -2573,7 +2590,7 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     content: url('https://api.iconify.design/feather/chevron-down.svg?color=%2300afef');
     transform: rotate(-180deg);
 }
-.accordion-item.active .accordion-item-body{
+.accordion-item.active .accordion-item-body.visible {
     overflow: visible !important;
 }
 .order-timeline-item{

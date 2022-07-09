@@ -69,7 +69,7 @@
                                         </div>
                                         <div>
                                             <span>$8</span>
-                                            <span class="tc-ok">Completed</span>
+                                            <span class="tc-light-blue">In progress</span>
                                         </div>
                                     </div>
 
@@ -84,9 +84,9 @@
                                 <div>
                                     <!-- Toggle the display of each item buy using "d-none" -->
                                     <!-- Delivered Icon -->
-                                    <div class="delivered"><span class="iconify" data-icon="feather:check-circle"></span> <span>Delivered</span></div>
+                                    <div class="delivered d-none"><span class="iconify" data-icon="feather:check-circle"></span> <span>Delivered</span></div>
                                     <!-- Progress Icon -->
-                                    <div class="in-progress d-none"><span class="iconify" data-icon="feather:bell"></span><span>In progress</span></div>
+                                    <div class="in-progress"><span class="iconify" data-icon="feather:bell"></span><span></span></div>
                                     <!-- Cancel Icon -->
                                     <div class="cancelled d-none"><span class="iconify" data-icon="feather:x-circle"></span><span>cancelled</span></div>
                                     <span class="date">20 Jul 2022</span>
@@ -96,7 +96,7 @@
                             <div class="accordion">
 
                                 <!-- Add "ok" or "error" "pending" to the accordion-item Class  -->
-                                <div class="accordion-item">
+                                <div class="accordion-item active">
 
                                     <div class="accordion-item-header noselect">
                                         <div class="order-timeline-item">
@@ -129,7 +129,7 @@
 
                                         <!-- You can remove Item Button Holder at anytime or toggle class "d-none"  -->
                                         <div class="item-btn-holder">
-                                            <div class="width-100"><button class=" btn-border-main"> <span><span class="iconify" data-icon="feather:thumbs-up"></span></span> Accept Order</button></div>
+                                            <div class="width-100"><button class=" btn-border-main"> <span><span class="iconify" data-icon="feather:thumbs-up"></span></span> <a href="order_timeline_company.html" style="color: white;">Accept Order</a></button></div>
 
                                             <div class="width-100"><button class=" btn-border-light-blue tc-light-blue bg-unset"> <span><span class="iconify" data-icon="feather:download"></span></span> Download</button></div>
                                         </div>
@@ -203,7 +203,7 @@
             </div>
 
             <!-- Rate Client Button , can be removed at any time  -->
-            <div class="custom-offer-top bg-unset">
+            <div class="custom-offer-top bg-unset d-none">
                 <button class="v-link-page rate-client-btn  bg-pend" vref="starRating">
                     <span><span class="iconify" data-icon="feather:star"></span></span> Rate Freelancer
                 </button>
@@ -349,7 +349,7 @@
 
                 <div class="bottom" >
                     <div class=" width-100" style="padding: 0 2.5rem;">
-                        <a href="order_clients.html" class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100">Rate</button></a>
+                        <div class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100">Rate</button></div>
                     </div>
                 </div>
             </div>

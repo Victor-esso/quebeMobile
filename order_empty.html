@@ -65,7 +65,7 @@
             <div class="bottom d-flex justify-content-between align-items-center px-5 height-fit-content">
                 <a href="dashboard.html" class="main-nav  py-3"><span class="iconify" data-icon="feather:home"></span></a>
                 <a href="buyer_search.html" class="main-nav  py-3"><span class="iconify" data-icon="feather:search"></span></a>
-                <a href="messages_empty.html" class="main-nav  py-3"><span class="iconify" data-icon="feather:mail"></span></span></a>
+                <a href="messages_empty.html" class="main-nav  py-3" badge="6"><span class="iconify" data-icon="feather:mail"></span></span></a>
                 <a href="#" class="main-nav active py-3"><span class="iconify" data-icon="feather:clipboard"></span></a>
                 <a href="profile.html" class="main-nav py-3"><span class="iconify" data-icon="feather:user"></span></a>
             </div>
@@ -100,9 +100,26 @@
     <!-- Moves to messages after 5 seconds -->
     <script>
         setTimeout(() => {
-                    window.location.href = './order.html';
+                    //window.location.href = './order.html';
             }, 4000);
     </script>
+
+<script>
+    setTimeout(() => {
+        if(window.location.hash == '#clients'){
+            window.location.href = './order_clients.html';
+        }
+        if(window.location.hash == '#company'){
+            window.location.href = './order_company.html';
+        }
+        if(window.location.hash == '#freelancer'){
+            window.location.href = './order_freelancer.html';
+        }
+        if(window.location.hash == ''){
+            window.location.href = './order.html';
+        }
+    },4000)
+</script>
 
 
 

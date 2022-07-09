@@ -23,54 +23,68 @@
     <!-- JQuery Ui -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- AnimateCSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
 
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body v-fixedHeight>
+<body>
     <div id="v-app">
+        <!-- Start -->
+        <div class="swiper starterSwiper fit-parent">
 
-        <div class="v-page d-flex flex-column ">
-            <!-- Top -->
-            <div class="top grid-center d-flex px-4 py-2 border">
-                <button class="trigger-history-back btn-top" left><span class="iconify" data-icon="feather:arrow-left"></span></button>
-                <h2 class="page-title-top" middle>Messages (0)</h2>
-            </div>
-
-            <!-- Body -->
-            <div class="body scroll-y">
-                <!-- Swiper -->
-                <div class="swiper v-slick-page width-100 height-100">
-                    <div class="swiper-wrapper">
-                        <!-- Body Inner -->
-                        <div class="swiper-slide height-100 grid-center">
-
-                            <div class="width-100">
-                                <div icon class="width-fit-content mx-auto" style="margin-bottom: 20px;"><lottie-player src="assets/json/101307-empty-view-image.json"  background="transparent"  speed="1"  style="width: 185px; height: 185px;"    autoplay></lottie-player></div>
-                                <p class="text-center mx-auto tc-grey font-size-3" style="width: 70%;">No Messages Yet</p>
-                            </div>
-
+            <div class="swiper-wrapper">
+                <!-- Slide -->
+                <div class="swiper-slide">
+                    <!-- Image -->
+                    <img src="https://images.pexels.com/photos/7605818/pexels-photo-7605818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <!-- Content -->
+                    <div class="content">
+                        <div>
+                            <h2>Find Your<br>Dream <span>Job</span> Here</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rem iste esse rerum autem odit obcaecati consectetur tempore delectus dolorem maiores, cumque repudiandae neque deserunt sunt error sequi optio et.</p>
                         </div>
                     </div>
-                    <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                </div>
+
+                <div class="swiper-slide">
+                    <!-- Image -->
+                    <img src="https://images.pexels.com/photos/5332214/pexels-photo-5332214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <!-- Content -->
+                    <div class="content">
+                        <div>
+                            <h2>Easily <span>Apply</span> Online</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur elit. Laboriosam rem iste rerum autem odit obcaecati tempore delectus dolorem maiores, cumque repudiandae neque deserunt sunt sequi optio et.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <!-- Image -->
+                    <img src="https://images.pexels.com/photos/5588381/pexels-photo-5588381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <!-- Content -->
+                    <div class="content">
+                        <div>
+                            <h2>Earn Money From The <span>Comfort</span> Of Your Home</h2>
+                            <p>Lorem ipsum dolor sit amet elit. Laboriosam rem esse rerum autem odit obcaecati tempore delectus dolorem maiores, cumque repudiandae neque deserunt error sequi optio et.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-nav">
+                <div class=" d-flex justify-content-between align-items-center">
+                    <!-- Pagantion -->
+                    <div class="starterSwiper-pagnation"></div>
+                    <!-- Next Botton -->
+                    <button class="starterSwiper-next" href="get_started.html"><span class="iconify" data-icon="bi:arrow-right-short"></span></button>
                 </div>
             </div>
 
-            <!-- Bottom -->
-            <div class="bottom d-flex justify-content-between align-items-center px-5 height-fit-content">
-                <a href="dashboard.html" class="main-nav  py-3"><span class="iconify" data-icon="feather:home"></span></a>
-                <a href="search_clients.html" class="main-nav py-3"><span class="iconify" data-icon="feather:search"></span></a>
-                <a href="messages_empty.html" class="main-nav active py-3"><span class="iconify" data-icon="feather:mail"></span></span></a>
-                <a href="order_empty.html" class="main-nav py-3" badge="2"><span class="iconify" data-icon="feather:clipboard"></span></a>
-                <a href="profile.html" class="main-nav py-3"><span class="iconify" data-icon="feather:user"></span></a>
-            </div>
-        </div>
-
-        <div id="v-loader">
+            <!-- Skip Button -->
+            <a class="btn-skip" href="get_started.html">Skip</a>
             
         </div>
     </div>
@@ -78,7 +92,7 @@
 
 
     <!-- FullScreen button -->
-    <button id="fullscreen-toggle" class=""><span><span class="iconify" data-icon="material-symbols:fullscreen-rounded"></span></span><span active><span class="iconify" data-icon="material-symbols:fullscreen-exit-rounded"></span></span></button>
+    <button id="fullscreen-toggle"><span><span class="iconify" data-icon="material-symbols:fullscreen-rounded"></span></span><span active><span class="iconify" data-icon="material-symbols:fullscreen-exit-rounded"></span></span></button>
 
 
 
@@ -96,29 +110,8 @@
 
 
 
-    <!-- Moves to messages after 5 seconds -->
-    <script>
-        setTimeout(() => {
-            //window.location.href = './messages.html';
-            }, 4000);
-    </script>
 
-    <script>
-        setTimeout(() => {
-            if(window.location.hash == '#clients'){
-                window.location.href = './messages_clients.html';
-            }
-            if(window.location.hash == '#company'){
-                window.location.href = './messages_company.html';
-            }
-            if(window.location.hash == '#freelancer'){
-                window.location.href = './messages_freelancer.html';
-            }
-            if(window.location.hash == ''){
-                window.location.href = './messages.html';
-            }
-        },4000)
-    </script>
+
 
 
 
@@ -146,7 +139,6 @@
 
 
     <script src="assets/js/functions.js"></script>
-    <script src="assets/js/app_functions.js"></script>
 
 
 

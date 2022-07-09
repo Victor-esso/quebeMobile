@@ -69,7 +69,7 @@
                                         </div>
                                         <div>
                                             <span>$8</span>
-                                            <span class="tc-ok">Completed</span>
+                                            <span class="tc-light-blue">In progress</span>
                                         </div>
                                     </div>
 
@@ -84,9 +84,9 @@
                                 <div>
                                     <!-- Toggle the display of each item buy using "d-none" -->
                                     <!-- Delivered Icon -->
-                                    <div class="delivered"><span class="iconify" data-icon="feather:check-circle"></span> <span>Delivered</span></div>
+                                    <div class="delivered d-none"><span class="iconify" data-icon="feather:check-circle"></span> <span>Delivered</span></div>
                                     <!-- Progress Icon -->
-                                    <div class="in-progress d-none"><span class="iconify" data-icon="feather:bell"></span><span>In progress</span></div>
+                                    <div class="in-progress"><span class="iconify" data-icon="feather:bell"></span><span></span></div>
                                     <!-- Cancel Icon -->
                                     <div class="cancelled d-none"><span class="iconify" data-icon="feather:x-circle"></span><span>cancelled</span></div>
                                     <span class="date">20 Jul 2022</span>
@@ -145,7 +145,7 @@
                                 </div>
 
                                 <!-- Add "ok" or "error" "pending" to the accordion-item Class  -->
-                                <div class="accordion-item ok">
+                                <div class="accordion-item error active">
                                     <div class="accordion-item-header noselect">
                                         
                                         <div class="order-timeline-item">
@@ -170,10 +170,10 @@
                                                 <span></span>
                                             </div>
     
-                                            <div class="item-write">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, minima ipsa .</div>
+                                            <div class="item-write">I'd like an extension on the delivery date please, i have a few more things to add .</div>
 
                                             <div class="item-btn-holder" error>
-                                                <div class="width-100"><button class=" btn-border-main"> <span><span class="iconify" data-icon="feather:thumbs-up"></span></span> Accept Order</button></div>
+                                                <div class="width-100"><button class=" btn-border-main"> <span><span class="iconify" data-icon="feather:thumbs-up"></span></span> <a href="order_timeline_accept_company.html" style="color: white;">Accept Request</a></button></div>
                                                 <div class="width-100"><button class=" btn-border-bad tc-bad bg-unset"> <span><span class="iconify" data-icon="feather:thumbs-down"></span></span> Reject Request</button></div>
                                             </div>
 
@@ -203,7 +203,7 @@
             </div>
 
             <!-- Rate Client Button , can be removed at any time  -->
-            <div class="custom-offer-top bg-unset">
+            <div class="custom-offer-top bg-unset d-none">
                 <button class="v-link-page rate-client-btn  bg-pend" vref="starRating">
                     <span><span class="iconify" data-icon="feather:star"></span></span> Rate Freelancer
                 </button>
@@ -349,7 +349,7 @@
 
                 <div class="bottom" >
                     <div class=" width-100" style="padding: 0 2.5rem;">
-                        <a href="order_clients.html" class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100">Rate</button></a>
+                        <div class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100">Rate</button></div>
                     </div>
                 </div>
             </div>

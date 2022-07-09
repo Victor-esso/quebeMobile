@@ -52,7 +52,7 @@
                 <button class="trigger-history-back btn-top" left><span class="iconify" data-icon="feather:arrow-left"></span></button>
                 <div right class="d-flex">
                     <button class="btn-top v-link-page" vref="activeOrders"><span class="iconify" data-icon="feather:share-2"></span></button>
-                    <button class="btn-top"><span class="iconify" data-icon="feather:heart"></span></button>
+                    <button class="btn-top like-btn" style="font-size:1.75rem ;"><span class="tc-black"><span class="iconify" data-icon="ant-design:heart-outlined"></span></span> <span active><span class="iconify" data-icon="ant-design:heart-filled"></span></span></button>
                 </div>
             </div>
 
@@ -179,6 +179,97 @@
                         </div>
                     </div>
 
+                    <div class="accordion-item active">
+        
+                        <div class="accordion-item-header noselect">
+                            <div class="order-timeline-item">
+                                <div><span class="font-size-3  ">Rating</span></div>
+                                <div>
+                                    <span class="drop-icon"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item-body visible">
+                            <div class="accordion-item-body-content p-0 py-2 px-3 line-height-auto">
+                                                
+                                <div class="swiper v-row-swiper gigs-slide overflow-visible" swiper-props='{"spaceBetween":15,"a11y":{"enabled":false}}'>
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide" style="width: 76%;">
+                                           
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="bg-bad flex-shrink-0 me-2 height-equal-width radius-50p overflow-hidden" style="width: 4rem;">
+                                                    <img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fit-parent">
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <div>
+                                                        <div class=" width-fit-content iconText"><p class="txt fw-800 font-size-2x5 text-center m-0">Peter Griffin</p></div>
+                                                        <p class="tc-grey mb-0 font-size-2 txt-line-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet voluptates sit maiores mollitia a soluta atque impedit voluptatem odit possimus magni alias qui vel, praesentium porro veniam quod aliquid beatae.</p>
+                                                    </div>  
+                                                    
+                                                    <div class="star-rate-it tc-pend"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide" style="width: 76%;">
+                                           
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="bg-bad flex-shrink-0 me-2 height-equal-width radius-50p overflow-hidden" style="width: 4rem;">
+                                                    <img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fit-parent">
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <div>
+                                                        <div class=" width-fit-content iconText"><p class="txt fw-800 font-size-2x5 text-center m-0">Peter Griffin</p></div>
+                                                        <p class="tc-grey mb-0 font-size-2 txt-line-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet voluptates sit maiores mollitia a soluta atque impedit voluptatem odit possimus magni alias qui vel, praesentium porro veniam quod aliquid beatae.</p>
+                                                    </div>  
+                                                    
+                                                    <div class="star-rate-it tc-pend"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide" style="width: 76%;">
+                                           
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="bg-bad flex-shrink-0 me-2 height-equal-width radius-50p overflow-hidden" style="width: 4rem;">
+                                                    <img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fit-parent">
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <div>
+                                                        <div class=" width-fit-content iconText"><p class="txt fw-800 font-size-2x5 text-center m-0">Peter Griffin</p></div>
+                                                        <p class="tc-grey mb-0 font-size-2 txt-line-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet voluptates sit maiores mollitia a soluta atque impedit voluptatem odit possimus magni alias qui vel, praesentium porro veniam quod aliquid beatae.</p>
+                                                    </div>  
+                                                    
+                                                    <div class="star-rate-it tc-pend"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide" style="width: 76%;">
+                                           
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="bg-bad flex-shrink-0 me-2 height-equal-width radius-50p overflow-hidden" style="width: 4rem;">
+                                                    <img src="https://images.pexels.com/photos/1553783/pexels-photo-1553783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fit-parent">
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <div>
+                                                        <div class=" width-fit-content iconText"><p class="txt fw-800 font-size-2x5 text-center m-0">Peter Griffin</p></div>
+                                                        <p class="tc-grey mb-0 font-size-2 txt-line-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet voluptates sit maiores mollitia a soluta atque impedit voluptatem odit possimus magni alias qui vel, praesentium porro veniam quod aliquid beatae.</p>
+                                                    </div>  
+                                                    
+                                                    <div class="star-rate-it tc-pend"> <span>4.8</span> <span class="icon"><span class="iconify" data-icon="feather:star"></span></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     
 
                    
@@ -188,7 +279,7 @@
 
             <!-- Bottom -->
             <div class="bottom grid-center pt-1 height-fit-content">
-                <a class="v-submit-btn-default width-100 radius-0 btn-to-update" href="order_review_company.html">Order($100)</a>
+                <a class="v-submit-btn-default width-100 radius-0 btn-to-update" href="order_review_company_no_cards.html">Order($100)</a>
             </div>
         </div>
 
