@@ -69,7 +69,7 @@
     margin: 0;
     padding: 0;
 }
-a:active{
+a:active,a:hover{
     color: initial !important;
 }
 /* No ScrollBAR */
