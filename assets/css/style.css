@@ -1269,7 +1269,7 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
     position: relative;
 }
 
-.main-nav,.main-nav:visited{
+.main-nav,.main-nav:visited,.main-nav:active{
     font-size: 1.6rem;
     color: var(--grey);
     border-top: 2px solid rgba(255, 0, 0, 0);
