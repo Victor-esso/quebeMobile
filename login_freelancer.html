@@ -27,22 +27,73 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body>
+<body v-fixedHeight>
     <div id="v-app">
 
-        <div class="v-page grid-center">
+        <div class="v-page registerUser d-flex flex-column ">
 
-            <div class="width-100">
-                <h2 class="text-center fw-bold tc-black">Almost done!</h2>
-                <p class="text-center mx-auto tc-grey font-size-3" style="width: 70%;">complete your company profile on our desktop app</p>
-                <div icon class="width-fit-content mx-auto mb-4"><lottie-player src="assets/json/company-profile.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"    autoplay></lottie-player></div>
-                <a class="v-submit-btn-default mx-auto mb-3" href="dashboard_company.html" style="width: 60%;">Continue</a>
-                <button class="v-submit-btn-trans mx-auto" >Remind me later</button>
+            <div class="top">
+                <a class="btn-top" right href="#"><span class="iconify" data-icon="feather:x"></span></a>
+            </div>
+
+            <div class="body scroll-y">
+                <div>
+                    <h1 class="text-center fw-bold">Welcome back!</h1>
+                    <h2 class="text-center">Sign in to access your account</h2>
+
+                    <!-- Register Form -->
+                    <form action="" class="demoSubmit" href="dashboard_freelancer.html">
+                    
+                        <div class="v-form-input">
+                            <input type="text" placeholder="Email">
+                            <div class="error-msg">username already exist</div>
+                        </div>
+                        <div class="v-form-input">
+                            <input type="text" placeholder="Password">
+                            <div class="error-msg">username already exist</div>
+                        </div>
+
+                        
+                        <div class="d-flex justify-content-between align-items-center px-2">
+                            <div class="v-form-checkbox">
+                                <input type="checkbox" name="remember" id="remember">
+                                <label for="remember">
+                                    <div><span class="iconify" data-icon="bi:check"></span></div>
+                                    <span>Remember me</span>
+                                </label>
+                            </div>
+
+                            <a href="forgot_password.html" class="tc-blue-2 fw-bold" style="font-size:.8rem;" >Forgot Password</a>
+                        </div>
+
+                        <div class="v-form-submit">
+                            <input type="submit" value="Sign-in">
+                        </div>
+                    </form>
+
+                    <!-- Or -->
+                    <div class="or-divider">
+                        <span>or continue with</span>
+                    </div>
+
+                    <!-- Sign in Options -->
+                    <div class=" sign-in-options d-flex justify-content-around align-items-center ">
+                        <button><span class="iconify" data-icon="flat-color-icons:google"></span></button>
+                        <button><span class="iconify" data-icon="logos:linkedin-icon"></span></button>
+                        <button><span class="iconify" data-icon="logos:facebook"></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <p class="abs-center termsCondition">By signing up, you agree to our <a href="#">Terms of Service</a></p>
             </div>
 
         </div>
 
-        
+        <div id="v-loader">
+            
+        </div>
     </div>
 
 

@@ -547,7 +547,11 @@ $('.selection-item-holder').each(function(){
 })
 
 
-
+$('.update-btn-price').each(function(){
+    $(this).click(function(){
+        $('.btn-to-update').html($(this).attr('price'));
+    })
+})
 
 
 

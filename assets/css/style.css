@@ -489,7 +489,7 @@ a{
     object-fit: cover;
 }
 
-.info-state-ok,.info-state-bad,.info-state-pending{
+.info-state-ok,.info-state-bad,.info-state-pending,.info-state-primary{
     display: inline;
     padding: .3rem .9rem;
     font-size: .65rem;
@@ -507,6 +507,10 @@ a{
 .info-state-pending{
     color: var(--pend);
     background-color: #ffd5a447;
+}
+.info-state-primary{
+    color: var(--blue2);
+    background-color: #7cc2fc4d;
 }
 
 
@@ -3082,4 +3086,35 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
 }
 .chat-btn>span>span{
     display: grid;
+}
+
+.center-share{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    z-index: 4;
+}
+div.mini-payment-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+div.mini-payment-cards>div{
+    width: 47%;background-color: white;
+    border: 1px solid var(--blue2);
+    margin-bottom: 1rem;
+    border-radius:.5rem;
+    display: grid;
+    place-items: center;
+    color: var(--blue1);
+}
+div.mini-payment-cards>div.active{
+    background-color: var(--blue1);
+    border: 1px solid var(--blue1);
+    color: white;
+}
+div.mini-payment-cards>div.empty{
+    background-color: white;
+    border: 1px dashed var(--dark-grey);
 }

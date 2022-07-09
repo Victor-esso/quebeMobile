@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--Gilroy Font -->
+    <link rel="stylesheet" href="assets/fonts/gilroy-css/stylesheet.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- swiper Js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Boostrap 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- JQuery Ui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AnimateCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body v-fixedHeight>
+    <div id="v-app">
+
+        <div class="v-page d-flex flex-column ">
+            <!-- Top -->
+            <div class="top grid-center d-flex px-4 py-2 border">
+                <h2 class="page-title-top" middle>Order Timeline</h2>
+                <button class="trigger-history-back btn-top" left><span class="iconify" data-icon="feather:arrow-left"></span></button>
+                <a class="trigger-history-back btn-top" right href="message_conversation_screen_freelancer.html"><span class="iconify" data-icon="feather:message-square"></span></a>
+            </div>
+
+            <!-- Create offer Button can be removed at any time  -->
+            <div class="custom-offer-top">
+                <button class="v-link-page" vref="requestTimeExtension">
+                    <span><span class="iconify" data-icon="feather:clock"></span></span> Request Time Extention
+                </button>
+            </div>
+
+            <!-- Body -->
+            <div class="body scroll-y">
+                <!-- Swiper -->
+                <div class="swiper v-slick-page width-100 height-100" swiper-update-ontouch>
+                    <div class="swiper-wrapper">
+                        <!-- Body Inner -->
+                        <div class="swiper-slide py-2 px-1">
+
+                            <!-- Order Front Design -->
+                            <div class=" order-front-design">
+                                <a href="#">
+                                    <div class="profile-pic active">
+                                        <img src="https://bestprofilepictures.com/wp-content/uploads/2020/07/Cool-Profile-Picture-For-Instagram-768x784.jpg" alt="">
+                                    </div>
+
+                                    <div class="details">
+                                        <div>
+                                            <div>
+                                                <h1 class="txt-line-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis laudantium vero deleniti odit incidunt ratione earum facere quaerat, voluptate porro animi doloribus dignissimos hic distinctio maxime quasi atque corporis. Ut.</h1>
+                                                <p class=" txt-line-2 ">Duncan Willimas</p>
+                                            </div>
+                                            <div></div>
+                                        </div>
+                                        <div>
+                                            <span>$8</span>
+                                            <span class="tc-ok">Completed</span>
+                                        </div>
+                                    </div>
+
+                                </a>
+                            </div>
+
+                            <div class="order-timeline-item">
+                                <div>
+                                    <div><span class="iconify" data-icon="feather:clock"></span></div><span>Delivery Date</span>
+                                </div>
+
+                                <div>
+                                    <!-- Toggle the display of each item buy using "d-none" -->
+                                    <!-- Delivered Icon -->
+                                    <div class="delivered"><span class="iconify" data-icon="feather:check-circle"></span> <span>Delivered</span></div>
+                                    <!-- Progress Icon -->
+                                    <div class="in-progress d-none"><span class="iconify" data-icon="feather:bell"></span><span>In progress</span></div>
+                                    <!-- Cancel Icon -->
+                                    <div class="cancelled d-none"><span class="iconify" data-icon="feather:x-circle"></span><span>cancelled</span></div>
+                                    <span class="date">20 Jul 2022</span>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+
+                                <!-- Add "ok" or "error" "pending" to the accordion-item Class  -->
+                                <div class="accordion-item">
+
+                                    <div class="accordion-item-header noselect">
+                                        <div class="order-timeline-item">
+                                            <div>
+                                                <div><span class="iconify" data-icon="feather:truck"></span></div><span>Order Deliverables</span>
+                                                <!-- Upload Btn design for Freelancers -->
+                                                <span><button class="small-upload-btn d-none"> <span><span class="iconify" data-icon="feather:upload"></span></span> Upload File</button></span>
+                                            </div>
+            
+                                            <div>
+                                                <span class="drop-icon"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item-body order-timeline-content">
+                                    <div class="accordion-item-body-content content">
+
+                                        <div class="item-line">
+                                            <span>Filename:</span>
+                                            <span>Archive.zip</span>
+                                        </div>
+
+                                        <div class="item-line">
+                                            <span>Description</span>
+                                            <span></span>
+                                        </div>
+
+                                        <div class="item-write">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, minima ipsa obcaecati porro repellat ipsum iure ducimus eveniet consectetur maiores atque neque excepturi nam voluptas consequuntur sequi aperiam fugit fuga.</div>
+
+                                        <!-- You can remove Item Button Holder at anytime or toggle class "d-none"  -->
+                                        <div class="item-btn-holder">
+                                            <div class="width-100"><button class=" btn-border-main"> <span><span class="iconify" data-icon="feather:thumbs-up"></span></span> Accept Order</button></div>
+
+                                            <div class="width-100"><button class=" btn-border-light-blue tc-light-blue bg-unset"> <span><span class="iconify" data-icon="feather:download"></span></span> Download</button></div>
+                                        </div>
+
+                                        <!-- You can remove Item Button Holder at anytime or toggle class "d-none"  -->
+                                        <div class="item-btn-holder single d-none">
+                                            <div class="width-100"><button class=" btn-border-main"> <span><span class="iconify" data-icon="feather:send"></span></span> Submit</button></div>
+                                        </div>
+
+                                        <div class="pending-msg" pending><span>Pending Acceptance</span></div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <!-- Add "ok" or "error" "pending" to the accordion-item Class  -->
+                                <div class="accordion-item ok">
+                                    <div class="accordion-item-header noselect">
+                                        
+                                        <div class="order-timeline-item">
+                                            <div>
+                                                <div><span class="iconify" data-icon="feather:alert-circle" ></span></div><span>Resolution Requested</span>
+                                            </div>
+            
+                                            <div>
+                                                <span class="date">20 Jul 2022</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item-body order-timeline-content">
+                                        <div class="accordion-item-body-content content">
+                                            <div class="item-line">
+                                                <span>Delivery Date:</span>
+                                                <span>20 Jul 2022</span>
+                                            </div>
+    
+                                            <div class="item-line">
+                                                <span>Description</span>
+                                                <span></span>
+                                            </div>
+    
+                                            <div class="item-write">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, minima ipsa .</div>
+
+                                            <div class="item-btn-holder" error>
+                                                <div class="width-100"><button class=" btn-border-main"> <span><span class="iconify" data-icon="feather:thumbs-up"></span></span> Accept Order</button></div>
+                                                <div class="width-100"><button class=" btn-border-bad tc-bad bg-unset"> <span><span class="iconify" data-icon="feather:thumbs-down"></span></span> Reject Request</button></div>
+                                            </div>
+
+                                            <div class="accepted-msg" ok><span>Request Accepted</span></div>
+                                            <div class="pending-msg" pending><span>Pending Acceptance</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>          
+
+                            <div class="order-timeline-item">
+                                <div>
+                                    <div><span class="iconify" data-icon="feather:edit"></span></div><span>Order Started</span>
+                                </div>
+
+                                <div>
+                                    <span class="date">20 Jul 2022</span>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                </div>
+            </div>
+
+            <!-- Rate Client Button , can be removed at any time  -->
+            <div class="custom-offer-top bg-unset">
+                <button class="v-link-page rate-client-btn  bg-pend" vref="starRating">
+                    <span><span class="iconify" data-icon="feather:star"></span></span> Rate Client
+                </button>
+            </div>
+        </div>
+
+        <!-- request Time Extension Container-->
+        <div class="v-page vPages buyer-search-filter trigger-back" vpage-name="requestTimeExtension" style="padding-top: 40vh;">
+
+            <div class="inner">
+                <div class="main">
+
+                    <div class="swiper v-slick-page width-100 height-100">
+                        <div class="swiper-wrapper">
+                            <!-- Body Inner -->
+                            <div class="swiper-slide height-auto" style="padding:1rem 2.5rem ;">
+                                <!-- PAGE TITLE -->
+                                <h1 class="title mb-5">Request Time Extension</h1>
+
+                                <form action="">
+                                    
+                                    <div class="v-form-input icon-left">
+                                        <label for="location">Delivery Time</label>
+                                        <input type="datetime-local" placeholder="08/05/2022">
+                                        <div icons>
+                                            <span class="icon-left font-size-6 "><span class="iconify" data-icon="feather:calendar"></span></span>
+                                        </div>                                        
+                                    </div>
+                                    
+                                    <div class="v-form-select m-0">
+                                        <label for="location">Description</label>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="v-form-input m-0">
+                                                <textarea class=" font-size-2"></textarea>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                    </div>
+                </div>
+
+                <div class="bottom" >
+                    <div class=" width-100" style="padding: 0 2.5rem;">
+                        <div class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100">Send Offer</button></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Rating Container Container-->
+        <div class="v-page vPages buyer-search-filter trigger-back" vpage-name="starRating">
+
+            <div class="inner">
+                <div class="main">
+
+                    <div class="swiper v-slick-page width-100 height-100">
+                        <div class="swiper-wrapper">
+                            <!-- Body Inner -->
+                            <div class="swiper-slide height-auto" style="padding:1rem 2.5rem ;">
+                                <!-- PAGE TITLE -->
+                                <h1 class="title mb-5">Rate Client</h1>
+
+                                <form action="">
+
+                                    <div class="form-start-rate">
+                                        <p>Communication</p>
+                                        <span>How good was Communication between you and the client?</span>
+                                        <div>
+                                            <div class="rate-it">
+                                                <input type="radio" id="communication5" name="communication" value="5" />
+                                                <label for="communication5" title="text">5 stars</label>
+                                                <input type="radio" id="communication4" name="communication" value="4" />
+                                                <label for="communication5" title="text">4 stars</label>
+                                                <input type="radio" id="communication3" name="communication" value="3" />
+                                                <label for="communication3" title="text">3 stars</label>
+                                                <input type="radio" id="communication2" name="communication" value="2" />
+                                                <label for="communication2" title="text">2 stars</label>
+                                                <input type="radio" id="communication1" name="communication" value="1" />
+                                                <label for="communication1" title="text">1 star</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-start-rate">
+                                        <p>Service</p>
+                                        <span>Was the service as good as described in the order?</span>
+                                        <div>
+                                            <div class="rate-it">
+                                                <input type="radio" id="service5" name="service" value="5" />
+                                                <label for="service5" title="text">5 stars</label>
+                                                <input type="radio" id="service4" name="service" value="4" />
+                                                <label for="service4" title="text">4 stars</label>
+                                                <input type="radio" id="service3" name="service" value="3" />
+                                                <label for="service3" title="text">3 stars</label>
+                                                <input type="radio" id="service2" name="service" value="2" />
+                                                <label for="service2" title="text">2 stars</label>
+                                                <input type="radio" id="service1" name="service" value="1" />
+                                                <label for="service1" title="text">1 star</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-start-rate">
+                                        <p>Recommendation</p>
+                                        <span>What do you rate the client generally?</span>
+                                        <div>
+                                            <div class="rate-it">
+                                                <input type="radio" id="recommendation5" name="recommendation" value="5" />
+                                                <label for="recommendation5" title="text">5 stars</label>
+                                                <input type="radio" id="recommendation4" name="recommendation" value="4" />
+                                                <label for="recommendation4" title="text">4 stars</label>
+                                                <input type="radio" id="recommendation3" name="recommendation" value="3" />
+                                                <label for="recommendation3" title="text">3 stars</label>
+                                                <input type="radio" id="recommendation2" name="recommendation" value="2" />
+                                                <label for="recommendation2" title="text">2 stars</label>
+                                                <input type="radio" id="recommendation1" name="recommendation" value="1" />
+                                                <label for="recommendation1" title="text">1 star</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="v-form-select m-0">
+                                        <label for="location" class="d-block text-center">Description</label>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="v-form-input m-0">
+                                                <textarea class=" font-size-3 text-center" rows="3" placeholder="Describe the transaction in a few words..."></textarea>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+
+
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar" style="opacity:.3;"></div>
+                    </div>
+                </div>
+
+                <div class="bottom" >
+                    <div class=" width-100" style="padding: 0 2.5rem;">
+                        <div class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100">Rate</button></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FullScreen button -->
+    <button id="fullscreen-toggle" class=""><span><span class="iconify" data-icon="material-symbols:fullscreen-rounded"></span></span><span active><span class="iconify" data-icon="material-symbols:fullscreen-exit-rounded"></span></span></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    <!-- SwiperJs Javascript -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- JQuery UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- BodyMoving Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>
+
+    <!-- Lotti Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/app_functions.js"></script>
+
+
+
+
+
+    <!-- Main Javascript -->
+    <script src="assets/js/script.js"></script>    
+</body>
+</html>
