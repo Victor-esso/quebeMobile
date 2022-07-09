@@ -403,6 +403,9 @@ input{
 .tc-light-blue{
     color: var(--blue2) !important;
 }
+.hover-tc-white:hover{
+    color: white !important;
+}
 
 a{
     text-decoration: none;
@@ -677,6 +680,7 @@ a{
     padding: 5px 15px;
     border-radius: 5px;
 }
+
 
 
 
