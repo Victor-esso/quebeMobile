@@ -50,7 +50,7 @@
                         </div>
                 </div>
                 <button class="trigger-history-back btn-top" left><span class="iconify" data-icon="feather:arrow-left"></span></button>
-                <div right class="d-flex">
+                <div right class="d-flex d-none">
                     <button class="btn-top v-link-page" vref="activeOrders"><span class="iconify" data-icon="feather:file-text"></span></button>
                     <button class="btn-top"><span class="iconify" data-icon="feather:more-vertical"></span></button>
                 </div>
@@ -104,7 +104,7 @@
                                             <div><span>Extras</span><span>User Engagement, Account Customisation, User Testing</span></div>
                                         </div>
                                         <button class="v-link-page" vref="viewCustomeOrder">View Custom Order</button>
-                                        <span class="accepted">Accepted</span>
+                                        <span class="accepted d-none">Accepted</span>
                                     </div>
                                     <span>4:04pm</span>
                             </div>
@@ -211,7 +211,7 @@
 
         </div>
 
-        <!-- Custom Order Page -->
+        <!-- View Custom Order Page -->
         <div class="v-page vPages buyer-search-filter trigger-back" vpage-name="viewCustomeOrder">
 
             <div class="inner">
@@ -281,8 +281,8 @@
 
                 <div class="bottom" >
                     <div class="d-flex width-100" style="padding: 0 2.5rem;">
-                        <div class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100 bg-ok btn-border-ok">Accept Offer</button></div>
-                        <div class="width-100 grid-center ps-1"><button class="v-submit-btn-default width-100 btn-border-bad bg-bad tc-bad">Reject Offer</button></div>
+                        <a href="message_conversation_company2.html" class="width-100 grid-center pe-1"><button class="v-submit-btn-default width-100 btn-border-main btn-border-ok">Accept Offer</button></a>
+                        <div class="width-100 grid-center ps-1"><button class="v-submit-btn-default width-100  btn-border-bad tc-bad bg-unset">Reject Offer</button></div>
                     </div>
                 </div>
             </div>
