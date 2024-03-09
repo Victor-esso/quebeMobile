@@ -25,8 +25,9 @@ html {
         background-color: grey;
     }
     #v-app{
-        width: 320px;
-        height: 90%;
+        width: 360px;
+        height: unset;
+        aspect-ratio: 1/2.06;
         border: 1px solid red;
         border-radius: 20px;
         background-color: #fff;
