@@ -1278,7 +1278,7 @@ a.v-submit-btn-default:active,a.v-submit-btn-default:hover{
 
 .main-nav,.main-nav:visited,.main-nav:active{
     font-size: 1.6rem;
-    color: var(--grey);
+    color: #afafaf;
     border-top: 2px solid rgba(255, 0, 0, 0);
     height: 100%;
     display: grid;

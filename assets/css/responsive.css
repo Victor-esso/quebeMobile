@@ -22,14 +22,16 @@ html {
     body{
         display: grid;
         place-items: center;
-        background-color: grey;
+        background-color: #F2F3F5;
     }
     #v-app{
         width: 360px;
         height: unset;
         aspect-ratio: 1/2.06;
-        border: 1px solid red;
         border-radius: 20px;
         background-color: #fff;
+        box-shadow: 1px 33px 40px -16px rgba(0,0,0,0.23);
+        -webkit-box-shadow: 1px 33px 40px -16px rgba(0,0,0,0.23);
+        -moz-box-shadow: 1px 33px 40px -16px rgba(0,0,0,0.23);
     }
 }
